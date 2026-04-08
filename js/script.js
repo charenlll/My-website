@@ -1,6 +1,6 @@
 // ===== 跳转到第二主页 =====
 function goHome() {
-  window.location.href = "../home.html";
+  window.location.href = "./home.html";
 }
 
 // ===== 页面跳转（子页面）=====
