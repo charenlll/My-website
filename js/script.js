@@ -1,6 +1,6 @@
 // ===== 跳转到第二主页 =====
 function goHome() {
-  window.location.href = "./home.html";
+  window.location.href = "/My-website/home.html";
 }
 
 // ===== 页面跳转（子页面）=====
@@ -12,13 +12,13 @@ window.goPage = function (url) {
 // ===== 返回首页 =====
 window.goBack = function () {
   console.log("返回首页");
-  window.location.href = "../home.html";
+  window.location.href = "/My-website/home.html";
 };
 
 // ===== 返回首页 =====
 window.goIndex = function () {
   console.log("返回首页");
-  window.location.href = "./index.html";
+  window.location.href = "/My-website/index.html";
 };
 
 // ===== 下载软件 =====
