@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>数据研究</title>
+
+  <link rel="stylesheet" href="../css/about3.css">
+</head>
+
+<body>
+
+<!-- 背景 -->
+<div class="bg"></div>
+
+<!-- PC导航 -->
+<div class="top-bar">
+  <div class="nav-group">
+    <button onclick="goPage('./about1.html')">个人简介</button>
+    <button onclick="goPage('./about2.html')">向我提问</button>
+    <button onclick="goPage('./about3.html')">数据研究</button>
+    <button onclick="goPage('./about4.html')">软件开发</button>
+    <button onclick="goPage('./about5.html')">艺术表达</button>
+  </div>
+  <button class="top-btn" onclick="goHome()">主页</button>
+</div>
+
+<!-- 手机返回 -->
+<button class="back" onclick="goHome()">
+  <img src="../images/back.png">
+</button>
+
+<!-- 内容 -->
+<div class="content">
+
+  <h1>—— 数据研究 ——</h1>
+
+  <!-- 模块1 -->
+  <h2 class="section-title">📊 大规模数据处理与人群行为分析能力</h2>
+  <div class="card highlight">
+    <p>
+      能够处理千万级别的地铁刷卡数据，使用代码自动构建每日出行OD链路，并通过空间规律性、时间稳定性和出行频率等指标对乘客进行精细化分类。
+      熟练应用聚类算法（如 K-means）和动态面板 GMM 模型，挖掘乘客出行的时空特征及长期行为规律，为城市交通流量预测和运营优化提供科学依据。
+    </p>
+  </div>
+  <div class="card-img-container">
+    <img src="../images/data1.jpg" alt="不同人群出行规律示意" class="card-img">
+    <div class="img-caption">图例：不同人群出行规律示意</div>
+  </div>
+
+  <!-- 模块2 -->
+  <h2 class="section-title">📍 基于POI与缓冲区的设施数据库构建与空间分析能力</h2>
+  <div class="card highlight">
+    <p>
+      能够利用高精度 POI 数据（餐饮、企业、商业、文化、医疗等）建立系统化设施数据库，并结合 800 米缓冲区进行空间匹配和统计分析。
+      为商业选址、客流分析和城市规划决策提供数据支撑。
+    </p>
+  </div>
+  <div class="card-img-container">
+    <img src="../images/data2.jpg" alt="POI空间分析示意" class="card-img">
+    <div class="img-caption">图例：POI空间分析示意</div>
+  </div>
+
+  <!-- 模块3 -->
+  <h2 class="section-title">🧩 科研方法与策略优化能力，支持产品或运营决策</h2>
+  <div class="card highlight">
+    <p>
+      熟悉科学研究方法，包括多变量回归分析、时空动态建模、内生性处理等，能够定量评估网络扩张、设施布局和人口分布对不同类型出行需求的影响。
+      能够将研究成果转化为运营策略建议，例如通过合理规划商业设施和交通节点位置来提高客流量和用户体验，为大数据驱动的产品运营或城市交通决策提供价值。
+    </p>
+  </div>
+
+</div>
+
+<script src="../js/script.js"></script>
+
+</body>
+</html>

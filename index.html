@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>主页</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+<!-- 启动页 -->
+<div id="intro" class="intro">
+
+  <!-- 中间圆形图 -->
+  <img src="./images/head_picture1.png" class="intro-main">
+
+  <!-- ✅ 长条图（放这里） -->
+  <img src="./images/signature.png" class="intro-bar">
+
+</div>
+
+<!-- ===== 背景 ===== -->
+<div class="bg"></div>
+
+<!-- ===== 主页面（默认隐藏） ===== -->
+<div class="home-container">
+
+  <!-- 顶部 -->
+  <div class="top-section">
+
+    <img src="./images/head_picture.png" class="avatar">
+
+    <div class="name-group">
+      <h1 class="name">陈浩文</h1>
+      <img src="./images/signature.png" class="name-img">
+    </div>
+
+  </div>
+
+  <!-- 中间信息 -->
+  <div class="info-section">
+
+    <div class="info-label">手机号</div>
+    <div class="info-box">13294265626</div>
+
+    <div class="info-label">微信号</div>
+    <div class="info-box">chw1164120252chw</div>
+
+    <div class="info-label">邮箱</div>
+    <div class="info-box">11641202526@qq.com</div>
+
+  </div>
+
+  <!-- 底部按钮 -->
+  <div class="bottom-section">
+    <button class="enter-btn" onclick="goHome()">点击进入</button>
+  </div>
+
+</div>
+
+<script src="./js/script.js"></script>
+
+<!-- ===== JS 控制切换 ===== -->
+<script>
+  const intro = document.getElementById("intro");
+  const home = document.querySelector(".home-container");
+
+  intro.onclick = function () {
+    intro.classList.add("fade-out");
+
+    setTimeout(() => {
+      intro.style.display = "none";
+      home.style.display = "flex";
+    }, 500);
+  };
+</script>
+
+</body>
+</html>

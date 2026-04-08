@@ -1,0 +1,77 @@
+<!DOCTYPE html> 
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第二主页</title>
+
+  <link rel="stylesheet" href="./css/home.css">
+</head>
+
+<body>
+
+<!-- ===== 背景 ===== -->
+<div class="bg2"></div>
+
+<!-- ===== 顶部导航（PC显示） ===== -->
+<div class="top-bar">
+
+  <div class="nav-group">
+    <button onclick="goPage('./pages/about1.html')">个人简介</button>
+    <button onclick="goPage('./pages/about2.html')">向我提问</button>
+    <button onclick="goPage('./pages/about3.html')">数据研究</button>
+    <button onclick="goPage('./pages/about4.html')">软件开发</button>
+    <button onclick="goPage('./pages/about5.html')">艺术表达</button>
+  </div>
+
+    <button class="top-btn" onclick="goIndex()">
+    主页
+  </button>
+
+</div>
+
+<!-- ===== 手机返回按钮 ===== -->
+<button class="back" onclick="goIndex()">
+  <img src="./images/back.png" alt="返回">
+</button>
+
+<!-- ===== 主体 ===== -->
+<div class="home2-container">
+
+  <!-- ===== 📱 手机按钮区域 ===== -->
+  <div class="menu-section">
+
+    <button class="menu-btn" onclick="goPage('./pages/about1.html')">
+      About · 个人简介
+    </button>
+
+    <button class="menu-btn" onclick="goPage('./pages/about2.html')">
+      AI · 向我提问
+    </button>
+
+    <button class="menu-btn" onclick="goPage('./pages/about3.html')">
+      Research · 数据研究
+    </button>
+
+    <button class="menu-btn" onclick="goPage('./pages/about4.html')">
+      Systems · 软件开发
+    </button>
+
+    <button class="menu-btn" onclick="goPage('./pages/about5.html')">
+      Design · 艺术表达
+    </button>
+
+  </div>
+
+  <!-- ===== PC中间展示 ===== -->
+  <div class="pc-intro">
+    <img src="./images/head_picture2.png" class="intro-main">
+    <img src="./images/signature.png" class="intro-bar">
+  </div>
+
+</div>
+
+<script src="./js/script.js"></script>
+
+</body>
+</html>
