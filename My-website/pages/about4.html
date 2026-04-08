@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>软件开发</title>
+
+  <link rel="stylesheet" href="../css/about4.css">
+</head>
+
+<body>
+
+<!-- 背景 -->
+<div class="bg"></div>
+
+<!-- PC导航 -->
+<div class="top-bar">
+  <div class="nav-group">
+    <button onclick="goPage('./about1.html')">个人简介</button>
+    <button onclick="goPage('./about2.html')">向我提问</button>
+    <button onclick="goPage('./about3.html')">数据研究</button>
+    <button onclick="goPage('./about4.html')">软件开发</button>
+    <button onclick="goPage('./about5.html')">艺术表达</button>
+  </div>
+  <button class="top-btn" onclick="goHome()">主页</button>
+</div>
+
+<!-- 手机返回 -->
+<button class="back" onclick="goHome()">
+  <img src="../images/back.png">
+</button>
+
+<!-- 内容 -->
+<div class="content">
+
+  <h1>—— 软件开发 ——</h1>
+
+  <!-- 子工具 -->
+  <h2 class="section-title">🚗 轨道交通刷卡数据清洗工具</h2>
+
+  <!-- 描述 -->
+  <div class="card highlight">
+    <p>
+      本工具面向轨道交通刷卡数据，支持灵活的数据清洗和筛选规则。
+      用户可以选择输入文件、指定列号（如用户卡号、进站/出站、时间、交易类型），并根据需求勾选处理规则。
+      自动化流程可处理重复进出站数据、筛选交易类型（奇数/偶数）、删除高频用户，确保数据质量和分析效率。
+    </p>
+  </div>
+
+  <!-- 功能 -->
+  <div class="card no-bg">
+    <p class="text-bold">核心功能：</p>
+
+    <p>• 文件选择：可选择任意 CSV 数据文件进行处理</p>
+    <p>• 列号自定义：用户手动输入各列序号，适应不同格式的数据</p>
+    <p>• 去除重复进出站：自动剔除进站和出站相同的记录</p>
+    <p>• 筛选交易类型：支持筛选交易类型为奇数或偶数的记录</p>
+    <p>• 删除高频用户：根据可自定义阈值剔除出行次数过多的用户</p>
+    <p>• 输出标准化 CSV：处理完成后生成格式统一的 CSV 文件，便于后续分析</p>
+  </div>
+
+  <!-- ✅ 只改这里：拆分按钮 -->
+  <div class="download-btn" onclick="downloadFile()">⬇ 下载软件</div>
+
+</div>
+
+<script src="../js/script.js"></script>
+
+</body>
+</html>

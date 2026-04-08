@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>向我提问</title>
+  <link rel="stylesheet" href="../css/about2.css">
+</head>
+<body>
+
+<!-- 背景 -->
+<div class="bg"></div>
+
+<!-- PC导航 -->
+<div class="top-bar">
+  <div class="nav-group">
+    <button onclick="goPage('./about1.html')">个人简介</button>
+    <button onclick="goPage('./about2.html')">向我提问</button>
+    <button onclick="goPage('./about3.html')">数据研究</button>
+    <button onclick="goPage('./about4.html')">软件开发</button>
+    <button onclick="goPage('./about5.html')">艺术表达</button>
+  </div>
+  <button class="top-btn" onclick="goHome()">主页</button>
+</div>
+
+<!-- 手机返回 -->
+<button class="back" onclick="goHome()">
+  <img src="../images/back.png">
+</button>
+
+<!-- 内容 -->
+<div class="content">
+
+  <h1>—— 向我提问 ——</h1>
+
+  <!-- 聊天卡片 -->
+  <div class="chat-card">
+    <div id="chat-window">
+      <!-- 聊天内容动态生成 -->
+    </div>
+    <div class="chat-input">
+      <input type="text" id="user-input" placeholder="输入你的问题...">
+      <button id="send-btn">发送</button>
+    </div>
+  </div>
+
+</div>
+
+<script src="../js/about2.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>
