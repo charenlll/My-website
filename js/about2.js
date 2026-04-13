@@ -8,20 +8,14 @@ const API_URL = "https://my-website-zeta-one-58.vercel.app/api/chat";
 // 模型
 const MODEL = "deepseek-chat";
 
-// ✅ 从 localStorage 读取次数（刷新不丢失）
+// 次数限制
 let requestCount = Number(localStorage.getItem('requestCount') || 0);
 const MAX_REQUESTS = 10;
-
-sendBtn.addEventListener('click', sendMessage);
-userInput.addEventListener('keypress', function(e) {
-  if (e.key === 'Enter') sendMessage();
-});
 
 async function sendMessage() {
   const text = userInput.value.trim();
   if (!text) return;
 
-  // ✅ 超过次数限制
   if (requestCount >= MAX_REQUESTS) {
     const limitMsg = document.createElement('div');
     limitMsg.className = 'message bot';
@@ -30,6 +24,10 @@ async function sendMessage() {
     chatWindow.scrollTop = chatWindow.scrollHeight;
     return;
   }
+
+  requestCount++;
+  localStorage.setItem('requestCount', requestCount);
+}
 
   // ✅ 次数 +1 并存储
   requestCount++;
