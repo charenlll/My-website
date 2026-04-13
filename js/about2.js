@@ -10,7 +10,7 @@ const MODEL = "deepseek-chat";
 
 // ✅ 从 localStorage 读取次数（刷新不丢失）
 let requestCount = Number(localStorage.getItem('requestCount') || 0);
-const MAX_REQUESTS = 3;
+const MAX_REQUESTS = 10;
 
 sendBtn.addEventListener('click', sendMessage);
 userInput.addEventListener('keypress', function(e) {
@@ -25,7 +25,7 @@ async function sendMessage() {
   if (requestCount >= MAX_REQUESTS) {
     const limitMsg = document.createElement('div');
     limitMsg.className = 'message bot';
-    limitMsg.textContent = "已达到本次访问的最大提问次数（3次）";
+    limitMsg.textContent = "已达到本次访问的最大提问次数（10次）";
     chatWindow.appendChild(limitMsg);
     chatWindow.scrollTop = chatWindow.scrollHeight;
     return;
