@@ -2,9 +2,10 @@ const sendBtn = document.getElementById('send-btn');
 const userInput = document.getElementById('user-input');
 const chatWindow = document.getElementById('chat-window');
 
-// DeepSeek 配置
-const BASE_URL = "https://api.deepseek.com/v1";
-const API_KEY = "sk-709a7d81c17b47a28edd33ca104cb1d1"; // ⚠️ 建议不要暴露真实 Key
+// ✅ 改成你的 Vercel API 地址
+const API_URL = "https://my-website-zeta-one-58.vercel.app/api/chat";
+
+// 模型
 const MODEL = "deepseek-chat";
 
 // ✅ 从 localStorage 读取次数（刷新不丢失）
