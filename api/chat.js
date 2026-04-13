@@ -1,5 +1,5 @@
 export default async function handler(req, res) {
-  const API_KEY = "sk-你的新key";
+  const API_KEY = "sk-e9793269826a4ff9ae836bdc5daaa94e";
 
   // ✅ 允许跨域（关键！！）
   res.setHeader("Access-Control-Allow-Origin", "*");
