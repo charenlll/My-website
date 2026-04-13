@@ -2,7 +2,7 @@ const sendBtn = document.getElementById('send-btn');
 const userInput = document.getElementById('user-input');
 const chatWindow = document.getElementById('chat-window');
 
-// ✅ 改成你的 Vercel API 地址
+// ✅ Vercel API
 const API_URL = "https://my-website-zeta-one-58.vercel.app/api/chat";
 
 // 模型
@@ -12,42 +12,36 @@ const MODEL = "deepseek-chat";
 let requestCount = Number(localStorage.getItem('requestCount') || 0);
 const MAX_REQUESTS = 10;
 
+// 事件监听（你刚刚漏了）
+sendBtn.addEventListener('click', sendMessage);
+userInput.addEventListener('keypress', function(e) {
+  if (e.key === 'Enter') sendMessage();
+});
+
 async function sendMessage() {
   const text = userInput.value.trim();
   if (!text) return;
 
+  // ❗ 次数限制
   if (requestCount >= MAX_REQUESTS) {
-    const limitMsg = document.createElement('div');
-    limitMsg.className = 'message bot';
-    limitMsg.textContent = "已达到本次访问的最大提问次数（10次）";
-    chatWindow.appendChild(limitMsg);
-    chatWindow.scrollTop = chatWindow.scrollHeight;
+    addMessage("已达到本次访问的最大提问次数（10次）", "bot");
     return;
   }
 
-  requestCount++;
-  localStorage.setItem('requestCount', requestCount);
-}
-
-  // ✅ 次数 +1 并存储
+  // ✅ 次数 +1
   requestCount++;
   localStorage.setItem('requestCount', requestCount);
 
   // 添加用户消息
-  const userMsg = document.createElement('div');
-  userMsg.className = 'message user';
-  userMsg.textContent = text;
-  chatWindow.appendChild(userMsg);
-
+  addMessage(text, "user");
   userInput.value = '';
-  chatWindow.scrollTop = chatWindow.scrollHeight;
 
   try {
-    const response = await fetch(`${BASE_URL}/chat/completions`, {
+    // ✅ 正确调用 Vercel（关键！）
+    const response = await fetch(API_URL, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${API_KEY}`
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify({
         model: MODEL,
@@ -59,24 +53,25 @@ async function sendMessage() {
     });
 
     const data = await response.json();
-    let reply = "AI 暂无回应";
 
-    if (data && data.choices && data.choices[0] && data.choices[0].message) {
+    let reply = "AI 暂无回应";
+    if (data?.choices?.[0]?.message?.content) {
       reply = data.choices[0].message.content;
     }
 
-    const botMsg = document.createElement('div');
-    botMsg.className = 'message bot';
-    botMsg.textContent = reply;
-    chatWindow.appendChild(botMsg);
-    chatWindow.scrollTop = chatWindow.scrollHeight;
+    addMessage(reply, "bot");
 
   } catch (err) {
-    const botMsg = document.createElement('div');
-    botMsg.className = 'message bot';
-    botMsg.textContent = "AI 调用失败，请检查网络或 API Key";
-    chatWindow.appendChild(botMsg);
-    chatWindow.scrollTop = chatWindow.scrollHeight;
+    addMessage("AI 调用失败，请检查网络或接口配置", "bot");
     console.error(err);
   }
+}
+
+// UI函数
+function addMessage(text, role) {
+  const msg = document.createElement('div');
+  msg.className = 'message ' + role;
+  msg.textContent = text;
+  chatWindow.appendChild(msg);
+  chatWindow.scrollTop = chatWindow.scrollHeight;
 }
