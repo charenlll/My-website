@@ -1,5 +1,5 @@
 export default async function handler(req, res) {
-  const API_KEY = "sk-b5874778499f44f2802f824ab4792e24";
+  const API_KEY = "sk-d2026e7f3ebe4f26bf188e19aec0b5e9";
 
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method Not Allowed" });
