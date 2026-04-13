@@ -4,7 +4,7 @@ const chatWindow = document.getElementById('chat-window');
 
 // DeepSeek 配置
 const BASE_URL = "https://api.deepseek.com/v1";
-const API_KEY = "sk-9fad85d224c04757823c4ab3f4148d07"; // ⚠️ 建议不要暴露真实 Key
+const API_KEY = "sk-709a7d81c17b47a28edd33ca104cb1d1"; // ⚠️ 建议不要暴露真实 Key
 const MODEL = "deepseek-chat";
 
 // ✅ 从 localStorage 读取次数（刷新不丢失）
