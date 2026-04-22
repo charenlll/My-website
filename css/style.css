@@ -165,10 +165,10 @@
 /* ===== 底部按钮区域 ===== */
 .bottom-section {
   display: flex;
-  justify-content: center; /* 按钮水平居中 */
-  margin-top: 20px; /* 和上面内容距离 */
+  flex-direction: column;   /* ✅ 关键：改成竖排 */
+  align-items: center;      /* ✅ 水平居中 */
+  margin-top: 20px;
 }
-
 
 /* ===== 按钮 ===== */
 .enter-btn {
