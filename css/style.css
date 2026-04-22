@@ -184,6 +184,9 @@
   font-weight: bold; /* ✅ “点击主页”加粗 */
   backdrop-filter: blur(5px); /* 毛玻璃效果 */
   margin-bottom: 20px; /* 距离底部 */
+
+  text-align: center;          /* ✅ 防止文字偏 */
+  text-decoration: none;       /* ✅ 去掉 a 下划线 */
 }
 
 
