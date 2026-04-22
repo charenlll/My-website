@@ -31,3 +31,8 @@ function downloadFile() {
     window.open(baiduLink, "_blank"); // 在新标签页打开
   }
 }
+
+// ===== 打开AI Agent项目 =====
+function goAgentProject() {
+  window.open("https://charenlll.github.io/mobility-agents/index.html", "_blank");
+}
