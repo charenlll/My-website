@@ -172,21 +172,24 @@
 
 /* ===== 按钮 ===== */
 .enter-btn {
-  width: 100%; /* 和 info-section 一样宽（关键） */
-  max-width: 500px; /* 限制最大宽度（和信息框一致） */
-  box-sizing: border-box; /* ✅ 关键修复：和 info-box 对齐 */
-  padding: 12px 0; /* 上下14px，左右由 width 控制 */
-  border: none; /* 去掉边框 */
-  border-radius: 10px; /* 圆角 */
-  background: rgba(226, 183, 66, 0.6); /* 按钮背景颜色 */
-  color: white; /* 字体颜色 */
-  font-size: 18px; /* 字体大小 */
-  font-weight: bold; /* ✅ “点击主页”加粗 */
-  backdrop-filter: blur(5px); /* 毛玻璃效果 */
-  margin-bottom: 20px; /* 距离底部 */
+  display: flex;              /* ✅ 新增 */
+  justify-content: center;    /* ✅ 水平居中 */
+  align-items: center;        /* ✅ 垂直居中 */
 
-  text-align: center;          /* ✅ 防止文字偏 */
-  text-decoration: none;       /* ✅ 去掉 a 下划线 */
+  width: 100%;
+  max-width: 500px;
+  box-sizing: border-box;
+  padding: 12px 0;
+  border: none;
+  border-radius: 10px;
+  background: rgba(226, 183, 66, 0.6);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  backdrop-filter: blur(5px);
+  margin-bottom: 20px;
+
+  text-decoration: none;
 }
 
 
