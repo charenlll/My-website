@@ -1,167 +1,217 @@
-/* ===== 全局重置（和第二份一致） ===== */
-* {
+/* ===== Design Tokens ===== */
+:root {
+  --color-primary: #a85a5a;
+  --color-primary-rgb: 168, 90, 90;
+  --color-accent: #d4a843;
+  --color-accent-rgb: 212, 168, 67;
+  --color-text-dark: #1a1a1a;
+  --color-text-light: #f5f0eb;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.12);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.2);
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --font-sans: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+}
+
+/* ===== Reset ===== */
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ===== 页面基础 ===== */
-body {
-  font-family: sans-serif;
+html {
+  -webkit-text-size-adjust: 100%;
 }
 
-/* ===== 背景 ===== */
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ===== Background ===== */
 .bg2 {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url("../images/bg2.jpg") no-repeat center;
-  background-size: cover;
+  inset: 0;
+  background: url("../images/bg2.jpg") no-repeat center center / cover;
   z-index: -1;
 }
 
-/* ===== 顶部导航（完全对齐第二份） ===== */
+/* ===== Top Navigation (PC) ===== */
 .top-bar {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-
+  right: 0;
   display: none;
-
-  padding: 15px 40px;
-
-  background: rgba(182, 98, 98, 0.4);
-  backdrop-filter: blur(10px);
-
+  align-items: center;
+  padding: 14px 40px;
+  background: rgba(var(--color-primary-rgb), 0.35);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   z-index: 1000;
-
-  display: none;
-  align-items: center; /* ✅ 防止高度突变 */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* 导航组 */
 .nav-group {
   display: flex;
-  gap: 30px;
+  gap: 8px;
 }
 
-/* 按钮（完全统一） */
-.top-bar button {
+.nav-group button {
   background: none;
   border: none;
-  color: white;
-
-  font-size: 16px;   /* ✅ 和第二份一致 */
-  font-weight: normal;
-  letter-spacing: 0;
-
-  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition-fast), background var(--transition-fast);
+  letter-spacing: 0.02em;
 }
 
-/* 右侧按钮 */
+.nav-group button:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-group button:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 2px;
+}
+
 .top-btn {
   margin-left: auto;
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+  border-radius: var(--radius-sm) !important;
 }
 
-/* ===== 手机返回按钮 ===== */
+.top-btn:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* ===== Mobile Back Button ===== */
 .back {
   position: fixed;
-  bottom: 30px;
+  bottom: 28px;
   left: 50%;
   transform: translateX(-50%);
-
-  width: 50px;
-  height: 50px;
-
-  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
   border: none;
-
-  background: rgba(182, 98, 98, 0.4);
-  backdrop-filter: blur(10px);
-
+  background: rgba(var(--color-primary-rgb), 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   display: flex;
   justify-content: center;
   align-items: center;
-
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  box-shadow: var(--shadow-md);
   z-index: 10;
+  transition: transform var(--transition-fast), background var(--transition-fast);
+}
+
+.back:hover {
+  background: rgba(var(--color-primary-rgb), 0.6);
+  transform: translateX(-50%) scale(1.05);
+}
+
+.back:active {
+  transform: translateX(-50%) scale(0.95);
 }
 
 .back img {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
 }
 
-/* ===== 主容器 ===== */
+/* ===== Main Container ===== */
 .home2-container {
   height: 100vh;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  padding: 20px;
+  padding: 24px 20px;
 }
 
-/* ===== 手机按钮区域 ===== */
+/* ===== Mobile Menu ===== */
 .menu-section {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-
-  width: 80%;
-  max-width: 300px;
+  gap: 14px;
+  width: 85%;
+  max-width: 320px;
 }
 
-/* 按钮 */
 .menu-btn {
-  padding: 14px;
-
+  padding: 16px 20px;
   border: none;
-  border-radius: 12px;
+  border-radius: var(--radius-md);
+  background: rgba(var(--color-primary-rgb), 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--color-text-light);
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-align: left;
+  transition: transform var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
 
-  background: rgba(182, 98, 98, 0.4);
-  color: white;
-
-  font-size: 18px;
-
-  backdrop-filter: blur(5px);
+.menu-btn:hover {
+  background: rgba(var(--color-primary-rgb), 0.5);
+  transform: translateX(4px);
+  box-shadow: var(--shadow-sm);
 }
 
 .menu-btn:active {
-  transform: scale(0.95);
+  transform: scale(0.97);
 }
 
-/* ===== PC中间展示 ===== */
+/* ===== PC Intro ===== */
 .pc-intro {
   display: none;
 }
 
-/* 图片大小（手机） */
 .intro-main {
   width: 100px;
-  border-radius: 50%;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-md);
 }
 
 .intro-bar {
   width: 150px;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.2));
 }
 
-/* =========================
-   💻 PC端适配（完全对齐逻辑）
-   ========================= */
+/* ===== PC Layout ===== */
 @media (min-width: 768px) {
-
-  /* 显示顶部导航 */
   .top-bar {
     display: flex;
   }
 
-  /* 隐藏手机内容 */
   .menu-section {
     display: none;
   }
@@ -170,20 +220,29 @@ body {
     display: none;
   }
 
-  /* 中间布局 */
   .pc-intro {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 50px;
+    gap: 32px;
+    animation: fadeInUp 0.6s ease;
   }
 
-  /* 图片放大 */
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
   .intro-main {
-    width: 200px;
+    width: 180px;
+    transition: transform var(--transition-base);
+  }
+
+  .intro-main:hover {
+    transform: scale(1.03);
   }
 
   .intro-bar {
-    width: 300px;
+    width: 260px;
   }
 }

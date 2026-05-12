@@ -1,87 +1,80 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>主页</title>
+  <meta name="description" content="陈浩文 - 数据分析与人工智能方向研究者，个人主页">
+  <meta name="theme-color" content="#a85a5a">
+  <title>陈浩文 | 个人主页</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
 
-<!-- 启动页 -->
-<div id="intro" class="intro">
+  <!-- Intro Screen -->
+  <section id="intro" class="intro" role="button" aria-label="点击进入主页" tabindex="0">
+    <img src="./images/head_picture1.png" class="intro-main" alt="头像" width="120" height="120">
+    <img src="./images/signature.png" class="intro-bar" alt="签名" width="180">
+  </section>
 
-  <!-- 中间圆形图 -->
-  <img src="./images/head_picture1.png" class="intro-main">
+  <!-- Background -->
+  <div class="bg" aria-hidden="true"></div>
 
-  <!-- ✅ 长条图（放这里） -->
-  <img src="./images/signature.png" class="intro-bar">
+  <!-- Main Page -->
+  <main class="home-container" aria-label="个人信息">
 
-</div>
+    <header class="top-section">
+      <img src="./images/head_picture.png" class="avatar" alt="陈浩文头像" width="100" height="100" loading="lazy">
+      <div class="name-group">
+        <h1 class="name">陈浩文</h1>
+        <img src="./images/signature.png" class="name-img" alt="签名" width="100" loading="lazy">
+      </div>
+    </header>
 
-<!-- ===== 背景 ===== -->
-<div class="bg"></div>
+    <section class="info-section" aria-label="联系方式">
+      <span class="info-label">手机号</span>
+      <div class="info-box" role="textbox" aria-readonly="true">13294265626</div>
 
-<!-- ===== 主页面（默认隐藏） ===== -->
-<div class="home-container">
+      <span class="info-label">微信号</span>
+      <div class="info-box" role="textbox" aria-readonly="true">chw1164120252chw</div>
 
-  <!-- 顶部 -->
-  <div class="top-section">
+      <span class="info-label">邮箱</span>
+      <div class="info-box" role="textbox" aria-readonly="true">11641202526@qq.com</div>
+    </section>
 
-    <img src="./images/head_picture.png" class="avatar">
+    <nav class="bottom-section" aria-label="导航">
+      <button class="enter-btn" type="button" onclick="goHome()">点击进入主页</button>
+      <a href="https://charenlll.github.io/mobility-agents/index.html"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="enter-btn ai-btn">
+        我的AI Agent项目
+      </a>
+    </nav>
 
-    <div class="name-group">
-      <h1 class="name">陈浩文</h1>
-      <img src="./images/signature.png" class="name-img">
-    </div>
+  </main>
 
-  </div>
+  <script src="./js/script.js"></script>
+  <script>
+    const intro = document.getElementById("intro");
+    const home = document.querySelector(".home-container");
 
-  <!-- 中间信息 -->
-  <div class="info-section">
+    function dismissIntro() {
+      intro.classList.add("fade-out");
+      setTimeout(() => {
+        intro.style.display = "none";
+        home.style.display = "flex";
+      }, 500);
+    }
 
-    <div class="info-label">手机号</div>
-    <div class="info-box">13294265626</div>
-
-    <div class="info-label">微信号</div>
-    <div class="info-box">chw1164120252chw</div>
-
-    <div class="info-label">邮箱</div>
-    <div class="info-box">11641202526@qq.com</div>
-
-  </div>
-
-  <!-- 底部按钮 -->
-  <div class="bottom-section">
-    <button class="enter-btn" onclick="goHome()">点击进入主页</button>
-
-    <!-- AI Agent按钮 -->
-    <a href="https://charenlll.github.io/mobility-agents/index.html"
-       target="_blank"
-       class="enter-btn ai-btn">
-      我的AI Agent项目
-    </a>
-  </div>
-
-</div>
-
-<script src="./js/script.js"></script>
-
-<!-- ===== JS 控制切换 ===== -->
-<script>
-  const intro = document.getElementById("intro");
-  const home = document.querySelector(".home-container");
-
-  intro.onclick = function () {
-    intro.classList.add("fade-out");
-
-    setTimeout(() => {
-      intro.style.display = "none";
-      home.style.display = "flex";
-    }, 500);
-  };
-</script>
+    intro.addEventListener("click", dismissIntro);
+    intro.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        dismissIntro();
+      }
+    });
+  </script>
 
 </body>
 </html>

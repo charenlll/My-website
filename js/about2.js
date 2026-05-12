@@ -1,46 +1,45 @@
+// ===== Chat Module =====
 const sendBtn = document.getElementById('send-btn');
 const userInput = document.getElementById('user-input');
 const chatWindow = document.getElementById('chat-window');
 
-// ✅ Vercel API
 const API_URL = "https://my-website-zeta-one-58.vercel.app/api/chat";
-
-// 模型
 const MODEL = "deepseek-chat";
-
-// ✅ 改这里：不用 localStorage（刷新自动重置）
-let requestCount = 0;
 const MAX_REQUESTS = 3;
+let requestCount = 0;
 
-// 事件监听
+// ===== Event Listeners =====
 sendBtn.addEventListener('click', sendMessage);
-userInput.addEventListener('keypress', function(e) {
-  if (e.key === 'Enter') sendMessage();
+userInput.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' && !e.shiftKey) {
+    e.preventDefault();
+    sendMessage();
+  }
 });
 
+// ===== Send Message =====
 async function sendMessage() {
   const text = userInput.value.trim();
   if (!text) return;
 
-  // ❗ 次数限制
   if (requestCount >= MAX_REQUESTS) {
     addMessage("已达到本次访问的最大提问次数（3次）", "bot");
     return;
   }
 
-  // ✅ 次数 +1（仅当前页面有效）
   requestCount++;
-
-  // 添加用户消息
   addMessage(text, "user");
   userInput.value = '';
+  userInput.disabled = true;
+  sendBtn.disabled = true;
+
+  // Show loading indicator
+  const loadingEl = addMessage("思考中...", "bot", true);
 
   try {
     const response = await fetch(API_URL, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         model: MODEL,
         messages: [
@@ -51,25 +50,30 @@ async function sendMessage() {
     });
 
     const data = await response.json();
+    const reply = data?.choices?.[0]?.message?.content || "AI 暂无回应";
 
-    let reply = "AI 暂无回应";
-    if (data?.choices?.[0]?.message?.content) {
-      reply = data.choices[0].message.content;
-    }
-
+    // Remove loading, add real reply
+    loadingEl.remove();
     addMessage(reply, "bot");
 
   } catch (err) {
+    loadingEl.remove();
     addMessage("AI 调用失败，请检查网络或接口配置", "bot");
-    console.error(err);
+    console.error("Chat error:", err);
+  } finally {
+    userInput.disabled = false;
+    sendBtn.disabled = false;
+    userInput.focus();
   }
 }
 
-// UI函数
-function addMessage(text, role) {
+// ===== UI Helper =====
+function addMessage(text, role, isLoading = false) {
   const msg = document.createElement('div');
-  msg.className = 'message ' + role;
+  msg.className = `message ${role}`;
   msg.textContent = text;
+  if (isLoading) msg.classList.add('loading');
   chatWindow.appendChild(msg);
   chatWindow.scrollTop = chatWindow.scrollHeight;
+  return msg;
 }

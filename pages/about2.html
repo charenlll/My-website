@@ -1,52 +1,51 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>向我提问</title>
+  <meta name="description" content="向陈浩文提问 - AI智能问答模块">
+  <meta name="theme-color" content="#a85a5a">
+  <title>向我提问 | 陈浩文</title>
   <link rel="stylesheet" href="../css/about2.css">
 </head>
+
 <body>
 
-<!-- 背景 -->
-<div class="bg"></div>
+  <div class="bg" aria-hidden="true"></div>
 
-<!-- PC导航 -->
-<div class="top-bar">
-  <div class="nav-group">
-    <button onclick="goPage('./about1.html')">个人简介</button>
-    <button onclick="goPage('./about2.html')">向我提问</button>
-    <button onclick="goPage('./about3.html')">数据研究</button>
-    <button onclick="goPage('./about4.html')">软件开发</button>
-    <button onclick="goPage('./about5.html')">艺术表达</button>
-  </div>
-  <button class="top-btn" onclick="goBack()">主页</button>
-</div>
-
-<!-- 手机返回 -->
-<button class="back" onclick="goBack()">
-  <img src="../images/back.png">
-</button>
-
-<!-- 内容 -->
-<div class="content">
-
-  <h1>—— 向我提问 ——</h1>
-
-  <!-- 聊天卡片 -->
-  <div class="chat-card">
-    <div id="chat-window">
-      <!-- 聊天内容动态生成 -->
+  <nav class="top-bar" aria-label="主导航">
+    <div class="nav-group">
+      <button type="button" onclick="goPage('./about1.html')">个人简介</button>
+      <button type="button" onclick="goPage('./about2.html')">向我提问</button>
+      <button type="button" onclick="goPage('./about3.html')">数据研究</button>
+      <button type="button" onclick="goPage('./about4.html')">软件开发</button>
+      <button type="button" onclick="goPage('./about5.html')">艺术表达</button>
     </div>
-    <div class="chat-input">
-      <input type="text" id="user-input" placeholder="输入你的问题...">
-      <button id="send-btn">发送</button>
+    <button type="button" class="top-btn" onclick="goBack()">主页</button>
+  </nav>
+
+  <button type="button" class="back" aria-label="返回" onclick="goBack()">
+    <img src="../images/back.png" alt="" width="22" height="22">
+  </button>
+
+  <main class="content">
+
+    <h1>向我提问</h1>
+
+    <div class="chat-card">
+      <div id="chat-window" role="log" aria-label="对话记录" aria-live="polite">
+        <!-- Messages rendered dynamically -->
+      </div>
+      <div class="chat-input">
+        <input type="text" id="user-input" placeholder="输入你的问题..." aria-label="输入问题" autocomplete="off">
+        <button type="button" id="send-btn">发送</button>
+      </div>
     </div>
-  </div>
 
-</div>
+  </main>
 
-<script src="../js/about2.js"></script>
-<script src="../js/script.js"></script>
+  <script src="../js/about2.js"></script>
+  <script src="../js/script.js"></script>
+
 </body>
 </html>
