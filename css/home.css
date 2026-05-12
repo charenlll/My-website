@@ -216,6 +216,11 @@ button {
   filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.2));
 }
 
+/* ===== PC Card Grid (hidden on mobile) ===== */
+.pc-card-grid {
+  display: none;
+}
+
 /* ===== Footer ===== */
 .site-footer {
   display: none;
@@ -239,7 +244,7 @@ button {
     height: auto;
     min-height: 100vh;
     justify-content: flex-start;
-    padding-top: 80px;
+    padding-top: 100px;
   }
 
   /* PC Profile Area */
