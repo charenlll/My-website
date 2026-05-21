@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="陈浩文软件开发项目 - Mobility Agents智能出行系统、轨道交通数据清洗工具">
+  <meta name="description" content="陈浩文软件开发项目 - AI桌面助手、Mobility Agents智能出行系统、轨道交通数据清洗工具">
   <meta name="theme-color" content="#a85a5a">
   <title>软件开发 | 陈浩文</title>
   <link rel="stylesheet" href="../css/about4.css">
@@ -32,8 +32,35 @@
 
     <h1>软件开发</h1>
 
+    <!-- 新增项目：Wriothesley AI桌面助手 -->
+    <section aria-label="Wriothesley AI桌面助手项目">
+      <h2 class="section-title">🐾 Wriothesley - AI 桌面助手</h2>
+
+      <div class="card highlight">
+        <p>
+          一个基于 Electron 与 DeepSeek API 开发的桌面宠物助手。该软件拥有生动的表情系统与交互逻辑，
+          能够实现AI对话、周计划管理以及待机互动功能。通过透明窗口置顶技术，为用户提供陪伴式桌面体验。
+        </p>
+      </div>
+
+      <div class="card no-bg">
+        <p class="text-bold">核心功能：</p>
+        <p>桌面互动：透明窗口置顶显示，支持拖拽移动与点击交互</p>
+        <p>表情系统：具备开心、生气、难过等多种情绪及眨眼、犯困等随机动作</p>
+        <p>AI对话：内置聊天窗口，接入DeepSeek大模型，支持自定义人物性格</p>
+        <p>计划管理：记录每周计划，助手会在待机时进行提醒</p>
+        <p>快速部署：提供打包好的可执行文件及完整源码</p>
+      </div>
+
+      <!-- 修改按钮逻辑，直接跳转到GitHub -->
+      <div class="download-btn" role="button" tabindex="0" onclick="window.open('https://github.com/charenlll/Wriothesley', '_blank')" onkeydown="if(event.key==='Enter')window.open('https://github.com/charenlll/Wriothesley', '_blank')">
+        访问GitHub
+      </div>
+    </section>
+
+    <!-- 原有项目：Mobility Agents（保持不变） -->
     <section aria-label="Mobility Agents项目">
-      <h2 class="section-title">城市公共交通智能出行系统（Mobility Agents）</h2>
+      <h2 class="section-title">城市公共交通智能出行系统（Mobility Agents）</him>
 
       <div class="card highlight">
         <p>
@@ -59,6 +86,7 @@
       </div>
     </section>
 
+    <!-- 原有项目：数据清洗工具（保持不变） -->
     <section aria-label="数据清洗工具">
       <h2 class="section-title">轨道交通刷卡数据清洗工具</h2>
 
