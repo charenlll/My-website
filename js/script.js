@@ -1,19 +1,49 @@
 // ===== Navigation =====
+// Resolve from this script so local files, local servers and GitHub Pages
+// all use the same navigation logic.
+const SITE_ROOT = new URL("../", document.currentScript.src);
+
+function navigateFromRoot(path) {
+  window.location.href = new URL(path, SITE_ROOT).href;
+}
+
 function goHome() {
-  window.location.href = "/My-website/home.html";
+  navigateFromRoot("home.html");
 }
 
 window.goPage = function (url) {
-  window.location.href = url;
+  window.location.href = new URL(url, window.location.href).href;
 };
 
 window.goBack = function () {
-  window.location.href = "/My-website/home.html";
+  navigateFromRoot("home.html");
 };
 
 window.goIndex = function () {
-  window.location.href = "/My-website/index.html";
+  navigateFromRoot("index.html");
 };
+
+// ===== Navigation State =====
+const mobileNav = document.querySelector(".mobile-nav");
+if (mobileNav) {
+  mobileNav.querySelectorAll("a").forEach((link) => {
+    if (new URL(link.href).pathname === window.location.pathname) {
+      link.classList.add("is-active");
+      link.setAttribute("aria-current", "page");
+    }
+  });
+}
+
+const desktopNav = document.querySelector(".nav-group");
+if (desktopNav) {
+  const currentPage = window.location.pathname.split("/").pop();
+  desktopNav.querySelectorAll("button[onclick]").forEach((button) => {
+    if (button.getAttribute("onclick").includes(currentPage)) {
+      button.classList.add("is-active");
+      button.setAttribute("aria-current", "page");
+    }
+  });
+}
 
 // ===== Download =====
 function downloadFile() {

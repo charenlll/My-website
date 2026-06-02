@@ -3,89 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="陈浩文 - 个人主页导航，涵盖个人简介、AI问答、数据研究、软件开发、艺术表达">
-  <meta name="theme-color" content="#a85a5a">
-  <title>陈浩文 | 导航</title>
+  <meta name="description" content="陈浩文 - 城市数据分析、人工智能应用与软件开发作品集">
+  <meta name="theme-color" content="#7f3f46">
+  <title>陈浩文 | 个人作品集</title>
   <link rel="stylesheet" href="./css/home.css">
 </head>
-
 <body>
-
-  <!-- Background -->
   <div class="bg2" aria-hidden="true"></div>
-
-  <!-- PC Navigation -->
-  <nav class="top-bar" aria-label="主导航">
-    <div class="nav-group">
-      <button type="button" onclick="goPage('./pages/about1.html')">个人简介</button>
-      <button type="button" onclick="goPage('./pages/about2.html')">向我提问</button>
-      <button type="button" onclick="goPage('./pages/about3.html')">数据研究</button>
-      <button type="button" onclick="goPage('./pages/about4.html')">软件开发</button>
-      <button type="button" onclick="goPage('./pages/about5.html')">艺术表达</button>
-    </div>
-    <button type="button" class="top-btn" onclick="goIndex()">主页</button>
-  </nav>
-
-  <!-- Mobile Back -->
-  <button type="button" class="back" aria-label="返回主页" onclick="goIndex()">
-    <img src="./images/back.png" alt="" width="22" height="22">
-  </button>
-
-  <!-- Main Content -->
-  <main class="home2-container">
-
-    <!-- Mobile Menu -->
-    <nav class="menu-section" aria-label="页面导航">
-      <button type="button" class="menu-btn" onclick="goPage('./pages/about1.html')">About · 个人简介</button>
-      <button type="button" class="menu-btn" onclick="goPage('./pages/about2.html')">AI · 向我提问</button>
-      <button type="button" class="menu-btn" onclick="goPage('./pages/about3.html')">Research · 数据研究</button>
-      <button type="button" class="menu-btn" onclick="goPage('./pages/about4.html')">Systems · 软件开发</button>
-      <button type="button" class="menu-btn" onclick="goPage('./pages/about5.html')">Design · 艺术表达</button>
+  <header class="top-bar">
+    <a class="brand" href="./home.html"><span class="brand-mark">CHW</span><span>陈浩文 · Portfolio</span></a>
+    <nav class="nav-group" aria-label="主导航">
+      <a href="./pages/about1.html">个人简介</a><a href="./pages/about3.html">数据研究</a>
+      <a href="./pages/about4.html">软件开发</a><a href="./pages/about5.html">艺术表达</a><a href="./pages/about2.html">AI 问答</a>
     </nav>
-
-    <!-- PC Profile + Cards -->
-    <div class="pc-intro">
-      <img src="./images/head_picture2.png" class="intro-main" alt="头像" width="140" height="140" loading="lazy">
-      <img src="./images/signature.png" class="intro-bar" alt="签名" width="200" loading="lazy">
-    </div>
-
-    <!-- PC Card Grid -->
-    <div class="pc-card-grid">
-      <a class="pc-card" href="./pages/about1.html">
-        <span class="pc-card-title">个人简介</span>
-        <span class="pc-card-desc">学业背景与核心能力</span>
-      </a>
-      <a class="pc-card" href="./pages/about2.html">
-        <span class="pc-card-title">向我提问</span>
-        <span class="pc-card-desc">AI 智能问答</span>
-      </a>
-      <a class="pc-card" href="./pages/about3.html">
-        <span class="pc-card-title">数据研究</span>
-        <span class="pc-card-desc">大规模数据分析与建模</span>
-      </a>
-      <a class="pc-card" href="./pages/about4.html">
-        <span class="pc-card-title">软件开发</span>
-        <span class="pc-card-desc">系统设计与工具开发</span>
-      </a>
-      <a class="pc-card" href="./pages/about5.html">
-        <span class="pc-card-title">艺术表达</span>
-        <span class="pc-card-desc">可视化与空间设计</span>
-      </a>
-    </div>
-
-    <!-- Footer -->
-    <footer class="site-footer">
-      <div class="footer-contact">
-        <span>手机：13294265626</span>
-        <span>微信：chw1164120252chw</span>
-        <span>邮箱：11641202526@qq.com</span>
+    <button type="button" class="top-btn" onclick="goIndex()">封面页</button>
+  </header>
+  <main class="home2-container">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Urban Data · AI Application · System Design</p>
+        <h1>以数据理解城市，<br>用系统回应真实问题。</h1>
+        <p class="hero-desc">我是陈浩文，武汉大学城市规划硕士研究生。关注城市数据分析、空间研究与 AI 应用开发，将研究方法转化为可解释、可交互、可落地的工具与系统。</p>
+        <div class="hero-actions"><a class="btn primary" href="./pages/about4.html">查看代表项目</a><a class="btn secondary" href="./pages/about1.html">了解我的经历</a></div>
       </div>
-      <div class="footer-copy">&copy; 2025 陈浩文 All Rights Reserved</div>
-    </footer>
-
+      <div class="hero-profile">
+        <img src="./images/head_picture2.png" class="hero-avatar" alt="陈浩文头像" width="156" height="156">
+        <img src="./images/signature.png" class="hero-signature" alt="陈浩文签名" width="190">
+        <p>城市规划 × 数据分析 × AI 应用</p>
+      </div>
+    </section>
+    <section class="stats" aria-label="能力概览">
+      <div><strong>千万级</strong><span>交通数据处理规模</span></div>
+      <div><strong>AI Agent</strong><span>智能出行与桌面助手</span></div>
+      <div><strong>LLM</strong><span>模型接入与交互开发</span></div>
+      <div><strong>GIS</strong><span>城市空间研究与可视化</span></div>
+    </section>
+    <section class="section-block">
+      <div class="section-heading"><div><p class="eyebrow">Featured Work</p><h2>代表项目</h2></div><a href="./pages/about4.html">查看全部项目 →</a></div>
+      <div class="featured-grid">
+        <article class="featured-card">
+          <p class="card-kicker">AI Agent · Web Application</p><h3>Mobility Agents</h3>
+          <p>融合公交、地铁与站点周边数据，通过大语言模型生成城市公共交通出行建议。</p>
+          <div class="tag-list"><span>LLM</span><span>Agent</span><span>响应式设计</span></div>
+          <a href="https://charenlll.github.io/mobility-agents/index.html" target="_blank" rel="noopener noreferrer">在线体验 ↗</a>
+        </article>
+        <article class="featured-card image-card">
+          <img src="./images/data1.jpg" alt="城市交通人群行为分析可视化" loading="lazy">
+          <div><p class="card-kicker">Urban Research · Data Analysis</p><h3>城市交通人群行为分析</h3><p>从千万级刷卡记录中构建出行链路，识别人群时空规律并支持运营决策。</p><a href="./pages/about3.html">查看研究案例 →</a></div>
+        </article>
+      </div>
+    </section>
+    <section class="section-block">
+      <div class="section-heading"><div><p class="eyebrow">Explore</p><h2>继续了解</h2></div></div>
+      <nav class="explore-grid">
+        <a href="./pages/about1.html"><b>01</b><strong>个人简介</strong><span>学习经历与能力结构</span></a>
+        <a href="./pages/about2.html"><b>02</b><strong>向我提问</strong><span>通过 AI 快速了解我</span></a>
+        <a href="./pages/about3.html"><b>03</b><strong>数据研究</strong><span>城市交通与空间分析</span></a>
+        <a href="./pages/about4.html"><b>04</b><strong>软件开发</strong><span>系统设计与工具实现</span></a>
+        <a href="./pages/about5.html"><b>05</b><strong>艺术表达</strong><span>可视化、设计与空间表达</span></a>
+      </nav>
+    </section>
+    <footer class="site-footer"><div><strong>陈浩文</strong><span>城市数据分析与 AI 应用开发</span></div><div class="footer-contact"><a href="mailto:11641202526@qq.com">11641202526@qq.com</a><span>微信：chw1164120252chw</span></div></footer>
   </main>
-
   <script src="./js/script.js"></script>
-
 </body>
 </html>

@@ -1,130 +1,36 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="陈浩文软件开发项目 - AI桌面助手、Mobility Agents智能出行系统、轨道交通数据清洗工具">
-  <meta name="theme-color" content="#a85a5a">
-  <title>软件开发 | 陈浩文</title>
-  <link rel="stylesheet" href="../css/about4.css">
-</head>
-
-<body>
-
-  <div class="bg" aria-hidden="true"></div>
-
-  <nav class="top-bar" aria-label="主导航">
-    <div class="nav-group">
-      <button type="button" onclick="goPage('./about1.html')">个人简介</button>
-      <button type="button" onclick="goPage('./about2.html')">向我提问</button>
-      <button type="button" onclick="goPage('./about3.html')">数据研究</button>
-      <button type="button" onclick="goPage('./about4.html')">软件开发</button>
-      <button type="button" onclick="goPage('./about5.html')">艺术表达</button>
-    </div>
-    <button type="button" class="top-btn" onclick="goBack()">主页</button>
-  </nav>
-
-  <button type="button" class="back" aria-label="返回" onclick="goBack()">
-    <img src="../images/back.png" alt="" width="22" height="22">
-  </button>
-
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="陈浩文软件开发项目 - AI 桌面助手、Mobility Agents 与数据清洗工具"><title>软件开发 | 陈浩文</title><link rel="stylesheet" href="../css/about4.css"></head>
+<body><div class="bg" aria-hidden="true"></div>
+  <nav class="top-bar"><div class="nav-group"><button onclick="goPage('./about1.html')">个人简介</button><button onclick="goPage('./about2.html')">向我提问</button><button onclick="goPage('./about3.html')">数据研究</button><button onclick="goPage('./about4.html')">软件开发</button><button onclick="goPage('./about5.html')">艺术表达</button></div><button class="top-btn" onclick="goBack()">主页</button></nav>
   <main class="content">
-
-    <h1>软件开发</h1>
-
-    <!-- 新增项目：Wriothesley AI桌面助手 -->
-    <section aria-label="Wriothesley AI桌面助手项目">
-      <h2 class="section-title">🐾 Wriothesley - AI 桌面助手</h2>
-
-      <div class="card highlight">
-        <p>
-          一个基于 Electron 与 DeepSeek API 开发的桌面宠物助手。该软件拥有生动的表情系统与交互逻辑，
-          能够实现AI对话、周计划管理以及待机互动功能。通过透明窗口置顶技术，为用户提供陪伴式桌面体验。
-        </p>
-      </div>
-
-      <div class="card no-bg">
-        <p class="text-bold">核心功能：</p>
-        <p>桌面互动：透明窗口置顶显示，支持拖拽移动与点击交互</p>
-        <p>表情系统：具备开心、生气、难过等多种情绪及眨眼、犯困等随机动作</p>
-        <p>AI对话：内置聊天窗口，接入DeepSeek大模型，支持自定义人物性格</p>
-        <p>计划管理：记录每周计划，助手会在待机时进行提醒</p>
-        <p>快速部署：提供打包好的可执行文件及完整源码</p>
-      </div>
-
-      <!-- 修改按钮逻辑，直接跳转到GitHub -->
-      <div class="download-btn" role="button" tabindex="0" onclick="window.open('https://github.com/charenlll/Wriothesley', '_blank')" onkeydown="if(event.key==='Enter')window.open('https://github.com/charenlll/Wriothesley', '_blank')">
-        访问GitHub
-      </div>
+    <header class="page-header"><p class="eyebrow">Systems & Tools</p><h1>软件开发</h1><p class="page-lead">将数据处理流程和 AI 能力封装为可交互的产品，覆盖在线系统、桌面助手与数据工具。</p></header>
+    <section>
+      <h2 class="section-title">AI 桌面助手（Wriothesley）</h2>
+      <div class="card highlight"><p>Wriothesley 是一个基于 Electron 与 DeepSeek API 的桌面助手。它通过透明置顶窗口常驻桌面，将 AI 对话、人物表情动画与周计划管理整合为轻量化的日常交互工具。用户可以自由拖拽助手、配置模型接口与人物性格，并通过聊天窗口完成对话和计划记录。</p></div>
+      <figure class="project-preview">
+        <a href="../images/Wriothesley.png" target="_blank" rel="noopener noreferrer" aria-label="打开 Wriothesley AI 桌面助手效果原图">
+          <img src="../images/Wriothesley.png" alt="Wriothesley AI 桌面助手效果展示" loading="lazy">
+        </a>
+        <figcaption>Wriothesley 桌面助手效果展示，点击图片查看原图</figcaption>
+      </figure>
+      <div class="card no-bg"><p class="text-bold">核心功能：</p><ul class="feature-list"><li>透明置顶窗口：助手常驻桌面，支持自由拖拽移动</li><li>表情与待机动画：包含眨眼、犯困以及多种情绪变化</li><li>AI 对话：接入 DeepSeek API，并支持自定义接口、模型与人物性格</li><li>周计划管理：记录每周计划，并通过桌面助手进行提醒</li><li>开箱即用：提供打包版本，也可以通过 npm 安装依赖后运行源码</li></ul><div class="tag-list"><span>Electron</span><span>JavaScript</span><span>DeepSeek API</span><span>桌面应用</span></div></div>
+      <a class="download-btn" href="https://github.com/charenlll/Wriothesley" target="_blank" rel="noopener noreferrer">查看源码</a>
     </section>
-
-    <!-- 原有项目：Mobility Agents（保持不变） -->
-    <section aria-label="Mobility Agents项目">
-      <h2 class="section-title">城市公共交通智能出行系统（Mobility Agents）</him>
-
-      <div class="card highlight">
-        <p>
-          本项目是一个基于大语言模型（LLM）的城市公共交通智能出行推荐系统，
-          融合公交与地铁数据，实现站点查询、地图交互与智能建议生成。
-          系统采用前后端分离 + 多层架构设计，通过智能体（Agent）自动分析站点特征，
-          为政府及企业决策提供个性化出行建议。
-        </p>
-      </div>
-
-      <div class="card no-bg">
-        <p class="text-bold">核心功能：</p>
-        <p>地图交互：支持公交 / 地铁站点可视化展示、缩放与点击交互</p>
-        <p>站点查询：获取站点详细信息及周边设施数据</p>
-        <p>智能推荐：基于LLM生成个性化出行建议</p>
-        <p>分层架构：前端 / 网关 / 智能体 / 数据层解耦设计</p>
-        <p>缓存优化：减少LLM调用，提高系统响应效率</p>
-        <p>响应式设计：兼容PC端与移动端访问</p>
-      </div>
-
-      <div class="download-btn" role="button" tabindex="0" onclick="goAgentProject()" onkeydown="if(event.key==='Enter')goAgentProject()">
-        查看项目
-      </div>
+    <section>
+      <h2 class="section-title">城市公共交通智能出行系统（Mobility Agents）</h2>
+      <div class="card highlight"><p>本项目是一个基于大语言模型（LLM）的城市公共交通智能出行推荐系统，融合公交与地铁数据，实现站点查询、地图交互与智能建议生成。系统采用前后端分离和多层架构设计，通过智能体自动分析站点特征。</p></div>
+      <div class="card no-bg"><p class="text-bold">核心功能：</p><ul class="feature-list"><li>公交 / 地铁站点可视化展示、缩放与点击交互</li><li>获取站点详细信息及周边设施数据</li><li>基于 LLM 生成个性化出行建议</li><li>前端 / 网关 / 智能体 / 数据层解耦设计</li><li>兼容 PC 端与移动端访问</li></ul></div>
+      <button class="download-btn" onclick="goAgentProject()">查看项目</button>
     </section>
-
-    <!-- 原有项目：数据清洗工具（保持不变） -->
-    <section aria-label="数据清洗工具">
+    <section>
       <h2 class="section-title">轨道交通刷卡数据清洗工具</h2>
-
-      <div class="card highlight">
-        <p>
-          本工具面向轨道交通刷卡数据，支持灵活的数据清洗和筛选规则。
-          用户可以选择输入文件、指定列号（如用户卡号、进站/出站、时间、交易类型），并根据需求勾选处理规则。
-          自动化流程可处理重复进出站数据、筛选交易类型（奇数/偶数）、删除高频用户，确保数据质量和分析效率。
-        </p>
-      </div>
-
-      <div class="card no-bg">
-        <p class="text-bold">核心功能：</p>
-        <p>文件选择：可选择任意 CSV 数据文件进行处理</p>
-        <p>列号自定义：用户手动输入各列序号，适应不同格式的数据</p>
-        <p>去除重复进出站：自动剔除进站和出站相同的记录</p>
-        <p>筛选交易类型：支持筛选交易类型为奇数或偶数的记录</p>
-        <p>删除高频用户：根据可自定义阈值剔除出行次数过多的用户</p>
-        <p>输出标准化 CSV：处理完成后生成格式统一的 CSV 文件，便于后续分析</p>
-      </div>
-
-      <div class="download-btn" role="button" tabindex="0" onclick="downloadFile()" onkeydown="if(event.key==='Enter')downloadFile()">
-        下载软件
-      </div>
+      <div class="card highlight"><p>本工具面向轨道交通刷卡数据，支持灵活的数据清洗和筛选规则。自动化流程可处理重复进出站数据、筛选交易类型和删除高频用户，确保数据质量和分析效率。</p></div>
+      <div class="card no-bg"><p class="text-bold">核心功能：</p><ul class="feature-list"><li>选择任意 CSV 数据文件，并按不同格式自定义列号</li><li>自动剔除进站和出站相同的记录</li><li>支持筛选交易类型为奇数或偶数的记录</li><li>根据可配置阈值删除高频用户</li><li>输出格式统一的 CSV 文件</li></ul></div>
+      <button class="download-btn" onclick="downloadFile()">下载软件</button>
     </section>
-
-    <footer class="site-footer">
-      <div class="footer-contact">
-        <span>手机：13294265626</span>
-        <span>微信：chw1164120252chw</span>
-        <span>邮箱：11641202526@qq.com</span>
-      </div>
-      <div class="footer-copy">&copy; 2025 陈浩文 All Rights Reserved</div>
-    </footer>
-
+    <footer class="site-footer"><span>邮箱：11641202526@qq.com</span><span>微信：chw1164120252chw</span></footer>
   </main>
-
+  <nav class="mobile-nav"><a href="../home.html">首页</a><a href="./about1.html">简介</a><a href="./about3.html">研究</a><a href="./about4.html">开发</a><a href="./about5.html">设计</a><a href="./about2.html">问答</a></nav>
   <script src="../js/script.js"></script>
-
-</body>
-</html>
+</body></html>

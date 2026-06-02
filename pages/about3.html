@@ -30,7 +30,13 @@
 
   <main class="content">
 
-    <h1>数据研究</h1>
+    <header class="page-header"><p class="eyebrow">Urban Research</p><h1>数据研究</h1><p class="page-lead">从城市交通记录、空间设施数据与视觉语言模型中识别规律，为真实场景提供可解释的分析依据。</p></header>
+    <section class="metric-grid"><div><strong>千万级</strong><span>地铁刷卡记录处理</span></div><div><strong>VLM</strong><span>道路要素自动提取</span></div><div><strong>K-means / GMM</strong><span>行为识别与动态建模</span></div></section>
+    <section aria-label="基于视觉语言模型的道路要素自动提取">
+      <h2 class="section-title">基于视觉语言模型的道路要素自动提取</h2>
+      <div class="card highlight"><p>基于激光点云数据与 Qwen 等视觉语言模型，完成道路边界线与路口区域的自动化提取。主要参与模型训练，采用监督微调（SFT）对基础模型进行冷启动预热，并引入 GRPO 算法持续优化模型表现。</p></div>
+      <div class="card no-bg"><p class="text-bold">方法与优化重点：</p><ul class="feature-list"><li>面向激光点云数据构建道路边界线与路口区域识别任务</li><li>使用 SFT 对基础视觉语言模型进行冷启动预热</li><li>引入 GRPO 算法优化复杂场景下的模型推理表现</li><li>设计涵盖格式约束、路口几何特征与召回率等维度的复合奖励函数</li><li>提升道路中心线与路口区域识别结果的平滑度和稳定性</li></ul><div class="tag-list"><span>激光点云</span><span>Qwen</span><span>视觉语言模型</span><span>SFT</span><span>GRPO</span></div></div>
+    </section>
 
     <section aria-label="大规模数据处理与人群行为分析">
       <h2 class="section-title">大规模数据处理与人群行为分析能力</h2>
@@ -41,7 +47,7 @@
         </p>
       </div>
       <figure class="card-img-container">
-        <img src="../images/data1.jpg" alt="不同人群出行规律示意" loading="lazy" width="800" height="450">
+        <a href="../images/data1.jpg" target="_blank" rel="noopener noreferrer"><img src="../images/data1.jpg" alt="不同人群出行规律示意" loading="lazy"></a>
         <figcaption class="img-caption">图例：不同人群出行规律示意</figcaption>
       </figure>
     </section>
@@ -55,7 +61,7 @@
         </p>
       </div>
       <figure class="card-img-container">
-        <img src="../images/data2.jpg" alt="POI空间分析示意" loading="lazy" width="800" height="450">
+        <a href="../images/data2.jpg" target="_blank" rel="noopener noreferrer"><img src="../images/data2.jpg" alt="POI空间分析示意" loading="lazy"></a>
         <figcaption class="img-caption">图例：POI空间分析示意</figcaption>
       </figure>
     </section>
@@ -81,6 +87,7 @@
 
   </main>
 
+  <nav class="mobile-nav"><a href="../home.html">首页</a><a href="./about1.html">简介</a><a href="./about3.html">研究</a><a href="./about4.html">开发</a><a href="./about5.html">设计</a><a href="./about2.html">问答</a></nav>
   <script src="../js/script.js"></script>
 
 </body>
