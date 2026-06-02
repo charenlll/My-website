@@ -1,2 +1,25 @@
 @import url("about1.css");
-.card-img-container{overflow:hidden;margin:8px 0 26px;border:1px solid var(--line);border-radius:var(--radius-md);background:var(--paper)}.card-img-container a{display:block;padding:10px;background:#f4efeb;cursor:zoom-in}.card-img-container img{width:100%;height:auto;object-fit:contain}.img-caption{padding:9px 14px;color:var(--muted);font-size:11px;text-align:center}
+.card-img-container {
+  overflow: hidden;
+  margin: 8px 0 26px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--paper);
+}
+.card-img-container a {
+  display: block;
+  padding: 10px;
+  background: #f4efeb;
+  cursor: zoom-in;
+}
+.card-img-container img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.img-caption {
+  padding: 9px 14px;
+  color: var(--muted);
+  font-size: 11px;
+  text-align: center;
+}
