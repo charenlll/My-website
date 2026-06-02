@@ -55,7 +55,7 @@ img {
       rgba(255, 253, 249, 0.94),
       rgba(247, 237, 233, 0.92)
     ),
-    url("../images/bg2.jpg") center/cover;
+    url("../images/previews/bg2.webp") center/cover;
 }
 .top-bar {
   position: fixed;
@@ -76,7 +76,7 @@ img {
   align-items: center;
   gap: 3px;
 }
-.top-bar button {
+.top-bar a {
   display: inline-flex;
   height: 36px;
   align-items: center;
@@ -86,8 +86,8 @@ img {
   font-size: 13px;
   line-height: 1;
 }
-.top-bar button:hover,
-.top-bar button.is-active {
+.top-bar a:hover,
+.top-bar a.is-active {
   background: rgba(var(--primary-rgb), 0.08);
   color: var(--primary);
 }
@@ -219,6 +219,50 @@ h1 {
   color: var(--primary);
   font-size: 11px;
 }
+.project-card {
+  padding-top: 2px;
+}
+.project-preview {
+  overflow: hidden;
+  margin: 8px 0 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--paper);
+  box-shadow: 0 7px 22px rgba(83, 43, 50, 0.08);
+}
+.project-preview a {
+  display: block;
+  padding: 10px;
+  background: #f4efeb;
+  cursor: zoom-in;
+}
+.project-preview img {
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  object-fit: contain;
+}
+.project-preview figcaption {
+  padding: 9px 14px;
+  color: var(--muted);
+  font-size: 11px;
+  text-align: center;
+}
+.action-button {
+  display: inline-flex;
+  margin: 4px 0 22px;
+  padding: 11px 18px;
+  border-radius: var(--radius-sm);
+  background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+  transition: var(--transition);
+}
+.action-button:hover {
+  transform: translateY(-2px);
+  background: var(--primary-dark);
+  box-shadow: 0 8px 20px rgba(83, 43, 50, 0.18);
+}
 .metric-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -254,9 +298,123 @@ h1 {
   color: var(--muted);
   font-size: 11px;
 }
+.site-footer a {
+  color: var(--primary);
+}
 .back,
 .mobile-nav {
   display: none;
+}
+.back-to-top {
+  position: fixed;
+  right: 18px;
+  bottom: 22px;
+  z-index: 8;
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  font-size: 18px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: var(--transition);
+}
+.back-to-top.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 56px 72px;
+  background: rgba(22, 17, 18, 0.88);
+}
+.lightbox.is-open {
+  display: flex;
+}
+.lightbox figure {
+  max-width: min(1200px, 92vw);
+  max-height: 86vh;
+  overflow: auto;
+  text-align: center;
+}
+.lightbox img {
+  width: auto;
+  max-width: 100%;
+  max-height: 78vh;
+  margin: auto;
+  cursor: zoom-in;
+  transition: var(--transition);
+}
+.lightbox img.is-zoomed {
+  max-width: none;
+  max-height: none;
+  cursor: zoom-out;
+}
+.lightbox figcaption {
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 12px;
+}
+.lightbox button {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+.lightbox-close {
+  top: 18px;
+  right: 18px;
+  width: 42px;
+  height: 42px;
+  font-size: 26px;
+}
+.lightbox-nav {
+  top: 50%;
+  width: 46px;
+  height: 46px;
+  font-size: 34px;
+}
+.lightbox-prev {
+  left: 18px;
+}
+.lightbox-next {
+  right: 18px;
+}
+.lightbox-zoom {
+  right: 18px;
+  bottom: 18px;
+  width: 54px;
+  height: 38px;
+  border-radius: 18px !important;
+  font-size: 12px;
+}
+.lightbox-original {
+  position: absolute;
+  right: 84px;
+  bottom: 18px;
+  display: inline-flex;
+  height: 38px;
+  align-items: center;
+  padding: 0 14px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 12px;
+}
+.lightbox-open {
+  overflow: hidden;
 }
 @media (max-width: 767px) {
   .top-bar {
@@ -312,5 +470,16 @@ h1 {
     background: rgba(var(--primary-rgb), 0.1);
     color: var(--primary);
     font-weight: 700;
+  }
+  .back-to-top {
+    right: 18px;
+    bottom: 82px;
+  }
+  .lightbox {
+    padding: 58px 18px 72px;
+  }
+  .lightbox-nav {
+    top: auto;
+    bottom: 18px;
   }
 }

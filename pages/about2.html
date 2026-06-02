@@ -1,62 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="向陈浩文的个人主页 AI 助手提问，了解学习经历、研究方向与项目实践">
-  <meta name="theme-color" content="#a85a5a">
-  <title>向我提问 | 陈浩文</title>
-  <link rel="stylesheet" href="../css/about2.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="向陈浩文的个人主页 AI 助手提问，了解学习经历、研究方向与项目实践"
+    />
+    <meta name="theme-color" content="#a85a5a" />
+    <title>向我提问 | 陈浩文</title>
+    <link rel="stylesheet" href="../css/about2.css?v=20260602-2" />
+  </head>
 
-<body>
+  <body>
+    <div class="bg" aria-hidden="true"></div>
 
-  <div class="bg" aria-hidden="true"></div>
+    <main class="content">
+      <header class="page-header">
+        <p class="eyebrow">AI Assistant</p>
+        <h1>向我提问</h1>
+        <p class="page-lead">
+          这是一个基于本站公开资料构建的个人介绍助手。你可以通过 AI
+          快速了解我的学习经历、研究方向与项目实践。本次访问最多可以提问 3 次。
+        </p>
+      </header>
 
-  <nav class="top-bar" aria-label="主导航">
-    <div class="nav-group">
-      <button type="button" onclick="goPage('./about1.html')">个人简介</button>
-      <button type="button" onclick="goPage('./about2.html')">向我提问</button>
-      <button type="button" onclick="goPage('./about3.html')">数据研究</button>
-      <button type="button" onclick="goPage('./about4.html')">软件开发</button>
-      <button type="button" onclick="goPage('./about5.html')">艺术表达</button>
-    </div>
-    <button type="button" class="top-btn" onclick="goBack()">主页</button>
-  </nav>
-
-  <button type="button" class="back" aria-label="返回" onclick="goBack()">
-    <img src="../images/back.png" alt="" width="22" height="22">
-  </button>
-
-  <main class="content">
-
-    <header class="page-header"><p class="eyebrow">AI Assistant</p><h1>向我提问</h1><p class="page-lead">这是一个基于本站公开资料构建的个人介绍助手。你可以通过 AI 快速了解我的学习经历、研究方向与项目实践。本次访问最多可以提问 3 次。</p></header>
-
-    <div class="chat-card">
-      <div class="prompt-section"><span>可以试着问：</span><div class="prompt-list"><button type="button" data-prompt="请介绍一下你的研究方向">研究方向</button><button type="button" data-prompt="你做过哪些软件开发项目？">开发项目</button><button type="button" data-prompt="你擅长哪些数据分析方法？">分析能力</button></div></div>
-      <div id="chat-window" role="log" aria-label="对话记录" aria-live="polite">
-        <!-- Messages rendered dynamically -->
+      <div class="chat-card">
+        <div class="prompt-section">
+          <span>可以试着问：</span>
+          <div class="prompt-list">
+            <button type="button" data-prompt="请介绍一下你的研究方向">
+              研究方向</button
+            ><button type="button" data-prompt="你做过哪些软件开发项目？">
+              开发项目</button
+            ><button type="button" data-prompt="你擅长哪些数据分析方法？">
+              分析能力
+            </button>
+          </div>
+        </div>
+        <div
+          id="chat-window"
+          role="log"
+          aria-label="对话记录"
+          aria-live="polite"
+        >
+          <!-- Messages rendered dynamically -->
+        </div>
+        <div class="chat-input">
+          <input
+            type="text"
+            id="user-input"
+            placeholder="输入你的问题..."
+            aria-label="输入问题"
+            autocomplete="off"
+          />
+          <button type="button" id="send-btn">发送</button>
+        </div>
       </div>
-      <div class="chat-input">
-        <input type="text" id="user-input" placeholder="输入你的问题..." aria-label="输入问题" autocomplete="off">
-        <button type="button" id="send-btn">发送</button>
-      </div>
-    </div>
+    </main>
 
-    <footer class="site-footer">
-      <div class="footer-contact">
-        <span>手机：13294265626</span>
-        <span>微信：chw1164120252chw</span>
-        <span>邮箱：11641202526@qq.com</span>
-      </div>
-      <div class="footer-copy">&copy; 2025 陈浩文 All Rights Reserved</div>
-    </footer>
-
-  </main>
-
-  <nav class="mobile-nav"><a href="../home.html">首页</a><a href="./about1.html">简介</a><a href="./about3.html">研究</a><a href="./about4.html">开发</a><a href="./about5.html">设计</a><a href="./about2.html">问答</a></nav>
-  <script src="../js/about2.js"></script>
-  <script src="../js/script.js"></script>
-
-</body>
+    <script src="../js/about2.js?v=20260602-2"></script>
+    <script src="../js/script.js?v=20260602-2"></script>
+  </body>
 </html>

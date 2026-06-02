@@ -1,8 +1,8 @@
 // ===== Chat Module =====
-const sendBtn = document.getElementById('send-btn');
-const userInput = document.getElementById('user-input');
-const chatWindow = document.getElementById('chat-window');
-const promptButtons = document.querySelectorAll('[data-prompt]');
+const sendBtn = document.getElementById("send-btn");
+const userInput = document.getElementById("user-input");
+const chatWindow = document.getElementById("chat-window");
+const promptButtons = document.querySelectorAll("[data-prompt]");
 
 const API_URL = "https://my-website-zeta-one-58.vercel.app/api/chat";
 const MODEL = "deepseek-chat";
@@ -34,21 +34,24 @@ const PROFILE_PROMPT = `
 - 艺术表达：包含通勤 OD 关系网络可视化、海报与文创设计、空间测绘、建筑与聚落尺度建模等实践。
 `;
 
-sendBtn.addEventListener('click', sendMessage);
-userInput.addEventListener('keydown', (e) => {
-  if (e.key === 'Enter' && !e.shiftKey) {
+sendBtn.addEventListener("click", sendMessage);
+userInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" && !e.shiftKey) {
     e.preventDefault();
     sendMessage();
   }
 });
 promptButtons.forEach((button) => {
-  button.addEventListener('click', () => {
+  button.addEventListener("click", () => {
     userInput.value = button.dataset.prompt;
     userInput.focus();
   });
 });
 
-addMessage("你好，我是陈浩文个人作品集的 AI 介绍助手。我会根据本站公开资料回答有关他的研究方向、项目实践和能力结构的问题。请选择一个推荐问题，或直接输入你想了解的内容。", "bot");
+addMessage(
+  "你好，我是陈浩文个人作品集的 AI 介绍助手。我会根据本站公开资料回答有关他的研究方向、项目实践和能力结构的问题。请选择一个推荐问题，或直接输入你想了解的内容。",
+  "bot",
+);
 
 async function sendMessage() {
   const text = userInput.value.trim();
@@ -61,7 +64,7 @@ async function sendMessage() {
 
   requestCount++;
   addMessage(text, "user");
-  userInput.value = '';
+  userInput.value = "";
   userInput.disabled = true;
   sendBtn.disabled = true;
 
@@ -69,15 +72,15 @@ async function sendMessage() {
 
   try {
     const response = await fetch(API_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         model: MODEL,
         messages: [
           { role: "system", content: PROFILE_PROMPT },
-          { role: "user", content: text }
-        ]
-      })
+          { role: "user", content: text },
+        ],
+      }),
     });
 
     const data = await response.json();
@@ -96,10 +99,10 @@ async function sendMessage() {
 }
 
 function addMessage(text, role, isLoading = false) {
-  const msg = document.createElement('div');
+  const msg = document.createElement("div");
   msg.className = `message ${role}`;
   msg.textContent = text;
-  if (isLoading) msg.classList.add('loading');
+  if (isLoading) msg.classList.add("loading");
   chatWindow.appendChild(msg);
   chatWindow.scrollTop = chatWindow.scrollHeight;
   return msg;

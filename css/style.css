@@ -33,7 +33,7 @@ button {
       rgba(255, 253, 249, 0.94),
       rgba(247, 237, 233, 0.92)
     ),
-    url("../images/bg2.jpg") center/cover;
+    url("../images/previews/bg2.webp") center/cover;
 }
 .intro {
   position: fixed;
@@ -49,7 +49,7 @@ button {
       rgba(255, 253, 249, 0.82),
       rgba(247, 237, 233, 0.72)
     ),
-    url("../images/bg1.jpg") center/cover;
+    url("../images/previews/bg1.webp") center/cover;
   color: var(--primary-dark);
   cursor: pointer;
   transition: opacity 0.45s;

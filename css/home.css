@@ -46,7 +46,7 @@ img {
       rgba(255, 253, 249, 0.94),
       rgba(247, 237, 233, 0.92)
     ),
-    url("../images/bg2.jpg") center/cover;
+    url("../images/previews/bg2.webp") center/cover;
 }
 .top-bar {
   position: sticky;

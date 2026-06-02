@@ -1,84 +1,116 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="陈浩文 - 数据分析与人工智能方向研究者，个人主页">
-  <meta name="theme-color" content="#a85a5a">
-  <title>陈浩文 | 个人主页</title>
-  <link rel="stylesheet" href="./css/style.css?v=20260602-1">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="陈浩文 - 数据分析与人工智能方向研究者，个人主页"
+    />
+    <meta name="theme-color" content="#a85a5a" />
+    <title>陈浩文 | 个人主页</title>
+    <link rel="stylesheet" href="./css/style.css?v=20260602-2" />
+  </head>
 
-<body>
-
-  <!-- Intro Screen -->
-  <section id="intro" class="intro" role="button" aria-label="点击进入主页" tabindex="0">
-    <img src="./images/head_picture1.png" class="intro-main" alt="头像" width="120" height="120">
-    <img src="./images/signature.png" class="intro-bar" alt="签名" width="180">
-    <p class="intro-hint">点击进入作品集</p>
-  </section>
-
-  <!-- Background -->
-  <div class="bg" aria-hidden="true"></div>
-
-  <!-- Main Page -->
-  <main class="home-container" aria-label="个人信息">
-
-    <header class="top-section">
-      <img src="./images/head_picture.png" class="avatar" alt="陈浩文头像" width="100" height="100" loading="lazy">
-      <div class="name-group">
-        <h1 class="name">陈浩文</h1>
-        <p class="role">城市数据分析 · AI 应用开发</p>
-      </div>
-    </header>
-
-    <section class="info-section" aria-label="个人简介">
-      <p>以城市规划为背景，关注数据分析、空间研究与人工智能应用，将研究方法转化为可交互的工具与系统。</p>
+  <body>
+    <!-- Intro Screen -->
+    <section
+      id="intro"
+      class="intro"
+      role="button"
+      aria-label="点击进入主页"
+      tabindex="0"
+    >
+      <img
+        src="./images/previews/head_picture1.webp"
+        class="intro-main"
+        alt="头像"
+        width="120"
+        height="120"
+      />
+      <img
+        src="./images/previews/signature.webp"
+        class="intro-bar"
+        alt="签名"
+        width="180"
+        height="84"
+      />
+      <p class="intro-hint">点击进入作品集</p>
     </section>
 
-    <nav class="bottom-section" aria-label="导航">
-      <button class="enter-btn" type="button" onclick="goHome()">进入个人作品集</button>
-      <a href="https://charenlll.github.io/mobility-agents/index.html"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="enter-btn ai-btn">
-        我的AI Agent项目
-      </a>
-    </nav>
+    <!-- Background -->
+    <div class="bg" aria-hidden="true"></div>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-      <div class="footer-contact">
-        <span>手机：13294265626</span>
-        <span>微信：chw1164120252chw</span>
-        <span>邮箱：11641202526@qq.com</span>
-      </div>
-      <div class="footer-copy">&copy; 2025 陈浩文 All Rights Reserved</div>
-    </footer>
+    <!-- Main Page -->
+    <main class="home-container" aria-label="个人信息">
+      <header class="top-section">
+        <img
+          src="./images/previews/head_picture.webp"
+          class="avatar"
+          alt="陈浩文头像"
+          width="100"
+          height="100"
+          loading="lazy"
+        />
+        <div class="name-group">
+          <h1 class="name">陈浩文</h1>
+          <p class="role">城市数据分析 · AI 应用开发</p>
+        </div>
+      </header>
 
-  </main>
+      <section class="info-section" aria-label="个人简介">
+        <p>
+          以城市规划为背景，关注数据分析、空间研究与人工智能应用，将研究方法转化为可交互的工具与系统。
+        </p>
+      </section>
 
-  <script src="./js/script.js"></script>
-  <script>
-    const intro = document.getElementById("intro");
-    const home = document.querySelector(".home-container");
+      <nav class="bottom-section" aria-label="导航">
+        <button class="enter-btn" type="button" onclick="goHome()">
+          进入个人作品集
+        </button>
+        <a
+          href="https://charenlll.github.io/mobility-agents/index.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="enter-btn ai-btn"
+        >
+          我的AI Agent项目
+        </a>
+      </nav>
 
-    function dismissIntro() {
-      intro.classList.add("fade-out");
-      setTimeout(() => {
-        intro.style.display = "none";
-        home.style.display = "flex";
-      }, 500);
-    }
+      <!-- Footer -->
+      <footer class="site-footer">
+        <div class="footer-contact">
+          <span>手机：13294265626</span>
+          <span>微信：chw1164120252chw</span>
+          <span>邮箱：11641202526@qq.com</span>
+        </div>
+        <div class="footer-copy">
+          &copy; <span data-current-year></span> 陈浩文 All Rights Reserved
+        </div>
+      </footer>
+    </main>
 
-    intro.addEventListener("click", dismissIntro);
-    intro.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        dismissIntro();
+    <script src="./js/script.js?v=20260602-2"></script>
+    <script>
+      const intro = document.getElementById("intro");
+      const home = document.querySelector(".home-container");
+
+      function dismissIntro() {
+        intro.classList.add("fade-out");
+        setTimeout(() => {
+          intro.style.display = "none";
+          home.style.display = "flex";
+        }, 500);
       }
-    });
-  </script>
 
-</body>
+      intro.addEventListener("click", dismissIntro);
+      intro.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          dismissIntro();
+        }
+      });
+    </script>
+  </body>
 </html>
