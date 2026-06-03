@@ -23,6 +23,13 @@ window.goIndex = function () {
   navigateFromRoot("index.html");
 };
 
+window.scrollToContact = function () {
+  const contact = document.getElementById("contact");
+  if (!contact) return;
+
+  contact.scrollIntoView({ behavior: "smooth", block: "end" });
+};
+
 // ===== Shared Page Shell =====
 const SUB_PAGES = [
   ["about1.html", "个人简介", "简介"],
