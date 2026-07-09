@@ -25,9 +25,10 @@
         <h2 class="section-title">AI 桌面助手（Wriothesley）</h2>
         <div class="card highlight">
           <p>
-            Wriothesley 是一个基于 Electron 与 DeepSeek API
-            的桌面助手。它通过透明置顶窗口常驻桌面，将 AI
-            对话、人物表情动画与周计划管理整合为轻量化的日常交互工具。用户可以自由拖拽助手、配置模型接口与人物性格，并通过聊天窗口完成对话和计划记录。
+            常驻桌面的 AI 助手。聊天、计划、截图 OCR、快速翻译、便签和装扮集中在一个轻量工具里。
+          </p>
+          <p class="text-muted" style="margin-top:8px">
+            Local-first · Electron · DeepSeek API
           </p>
         </div>
         <figure class="project-preview">
@@ -41,7 +42,7 @@
               alt="Wriothesley AI 桌面助手效果展示"
               loading="lazy"
               width="1200"
-              height="370"
+              height="577"
             />
           </a>
           <figcaption>
@@ -51,13 +52,12 @@
         <div class="card no-bg">
           <p class="text-bold">核心功能：</p>
           <ul class="feature-list">
-            <li>透明置顶窗口：助手常驻桌面，支持自由拖拽移动</li>
-            <li>表情与待机动画：包含眨眼、犯困以及多种情绪变化</li>
-            <li>
-              AI 对话：接入 DeepSeek API，并支持自定义接口、模型与人物性格
-            </li>
-            <li>周计划管理：记录每周计划，并通过桌面助手进行提醒</li>
-            <li>开箱即用：提供打包版本，也可以通过 npm 安装依赖后运行源码</li>
+            <li>桌面角色：透明显示、置顶停靠、可拖拽，并记住上次关闭位置</li>
+            <li>AI 聊天：支持角色设定、历史记忆和上下文对话</li>
+            <li>计划与周报：聊天可写入计划，任务完成后可整理周报</li>
+            <li>截图 OCR：区域截图、保存、复制、文字识别和翻译</li>
+            <li>便签与短文本：记录常用信息，快速复制临时内容</li>
+            <li>设置与装扮：管理 API、快捷键、主题、透明度和角色外观</li>
           </ul>
           <div class="tag-list">
             <span>Electron</span><span>JavaScript</span><span>DeepSeek API</span
@@ -66,10 +66,10 @@
         </div>
         <a
           class="action-button"
-          href="https://github.com/charenlll/Wriothesley"
+          href="https://charenlll.github.io/Wriothesley-Site-Public/"
           target="_blank"
           rel="noopener noreferrer"
-          >查看源码</a
+          >查看项目</a
         >
       </section>
       <section class="project-card">

@@ -1,1 +1,6 @@
 @import url("about1.css?v=20260602-2");
+
+.text-muted {
+  color: #666;
+  font-size: 0.95em;
+}
