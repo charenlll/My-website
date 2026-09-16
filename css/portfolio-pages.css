@@ -1,0 +1,73 @@
+﻿/* Interior pages share the homepage palette, with a quieter header for reading. */
+.portfolio-page{background:#f8f7f4}.portfolio-page .bg{background:#f8f7f4}.portfolio-page .top-bar{position:absolute;height:76px;background:#16131d;border-bottom:1px solid #ffffff1a;backdrop-filter:none;padding-inline:max(28px,calc((100vw - 1240px)/2));gap:32px}.portfolio-page .top-bar a{color:#cfc6d5}.portfolio-page .top-bar a:hover,.portfolio-page .top-bar a.is-active{background:#ffffff10;color:#fff}.portfolio-page .top-bar .top-btn{color:#e1d5e5!important}.portfolio-page .page-brand{font-size:11px;letter-spacing:.06em;font-weight:700;border:1px solid #ffffff40;border-radius:4px;gap:12px}.page-brand span{font-size:12px}.portfolio-page .content{width:min(1100px,calc(100% - 80px));padding-top:120px}.portfolio-page .page-header{position:relative;margin-bottom:40px;padding:30px 0 46px;min-height:220px;border-bottom:1px solid #dedbd7}.portfolio-page .page-header::before{content:'';position:absolute;width:70px;height:2px;background:#853744;bottom:-1px;left:0}.portfolio-page .eyebrow{color:#8b5e70;font-weight:500;letter-spacing:.2em;font-size:10px}.portfolio-page .page-header h1{font-size:52px;font-weight:550;letter-spacing:-.035em}.portfolio-page .page-lead{font-size:15px;color:#70666f;max-width:780px;margin-top:22px}.portfolio-page .section-index{padding-bottom:20px;border-bottom:1px solid var(--line);gap:8px}.portfolio-page .section-index a{background:transparent;border:0;border-bottom:1px solid #d9d3d5;border-radius:0;padding:7px 4px;margin-right:15px}.portfolio-page .section-index a:hover{border-color:#853744}.portfolio-page .section-title{font-size:26px;font-weight:600;margin-top:30px}.portfolio-page .card p{font-size:15px;line-height:2;max-width:900px}.portfolio-page .card.highlight{border:0;border-left:2px solid #956373;padding-left:24px}.portfolio-page .tag-list{gap:8px}.portfolio-page .tag-list span{font-size:11px;padding:5px 10px}.portfolio-page .content>section{padding-bottom:24px}.portfolio-page .content section[aria-label="实习经历"] article{display:grid;grid-template-columns:1fr 170px;column-gap:30px;padding:26px 0 30px 30px}.portfolio-page .content section[aria-label="实习经历"] article h3{font-size:20px}.portfolio-page .content section[aria-label="实习经历"] article .text-muted{text-align:right;font-size:12px;padding-top:4px}.portfolio-page .content section[aria-label="实习经历"] article>p:last-child{grid-column:1/-1;max-width:950px;margin-top:8px}.portfolio-page .project-card .project-preview{max-width:100%;margin-block:25px 30px;border:1px solid #e0dcd7;background:#eeede9;padding:18px;border-radius:5px}.portfolio-page .project-preview img{width:100%;max-height:540px;object-fit:contain}.portfolio-page .project-preview figcaption{font-size:11px;text-align:left;color:#7c717b;padding:14px 0 0}.portfolio-page .action-button{display:inline-flex;align-items:center;padding:12px 22px;font-size:13px;border-radius:3px}.portfolio-page .metric-grid{padding:24px 0;border-bottom:1px solid #dedbd7;gap:22px}.portfolio-page .metric-grid>div{padding:12px 20px}.portfolio-page .metric-grid strong{color:#853744}.portfolio-page .site-footer{margin-top:55px;padding:28px 0 35px;font-size:11px}.art-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px 28px}.art-item{min-width:0;border:0;background:transparent}.art-item .art-preview{display:block;height:480px;padding:18px;background:#eeede9;border:1px solid #dedbd7;border-radius:4px;overflow:hidden}.art-item img{width:100%;height:100%;object-fit:contain;transition:transform .3s}.art-item a:hover img{transform:scale(1.025)}.art-item p{margin-top:20px;font-size:14px;line-height:1.95;color:#6e656f}.portfolio-page .chat-card{padding:28px;border-radius:6px;background:#fff;box-shadow:0 15px 50px #35203905}.portfolio-page .prompt-section{margin-bottom:22px}.portfolio-page .prompt-list{gap:10px;margin-top:12px}.portfolio-page .prompt-list button{background:#f3eff2;border-radius:4px;color:#743548;padding:10px 16px}.portfolio-page #chat-window{border:0;border-top:1px solid #ece6ea;border-bottom:1px solid #ece6ea;border-radius:0;background:#fff;min-height:340px;padding:22px 8px}.portfolio-page .message{padding:15px 18px;line-height:1.9;border-radius:6px}.portfolio-page .message.bot{background:#f5f2f4;color:#423746}.portfolio-page .message.user{background:#493345}.portfolio-page .chat-input{margin-top:22px}.portfolio-page #user-input{background:#faf9f8;border-radius:4px;font-size:14px}.portfolio-page #send-btn{background:#493345;border-radius:4px;min-width:76px}.portfolio-page button:disabled{opacity:.6;cursor:default}
+@media(max-width:900px){.portfolio-page .top-bar{gap:16px;padding-inline:24px}.page-brand span{display:none}.art-item .art-preview{height:360px}}
+@media(max-width:767px){.portfolio-page .top-bar{display:flex;height:64px;padding:12px 20px}.portfolio-page .top-bar .nav-group{display:none}.portfolio-page .top-bar .top-btn{display:inline-flex}.portfolio-page .content{width:calc(100% - 40px);padding-top:88px;padding-bottom:80px}.portfolio-page .page-header{padding:22px 0 30px;min-height:180px}.portfolio-page .page-header h1{font-size:38px}.portfolio-page .page-lead{font-size:14px;line-height:1.9}.portfolio-page .section-title{font-size:23px}.portfolio-page .card p{font-size:14px}.portfolio-page .content section[aria-label="实习经历"] article{display:block;padding:22px 0 25px 23px}.portfolio-page .content section[aria-label="实习经历"] article h3{font-size:17px}.portfolio-page .content section[aria-label="实习经历"] article .text-muted{text-align:left;margin-top:6px}.portfolio-page .project-card .project-preview{padding:9px}.portfolio-page .section-index a{font-size:11px;margin-right:5px}.art-grid{grid-template-columns:1fr;gap:30px}.art-item .art-preview{height:auto;aspect-ratio:1/1.12;padding:12px}.portfolio-page .chat-card{padding:16px}.portfolio-page .prompt-list button{font-size:12px;padding:9px 12px}.portfolio-page #chat-window{min-height:300px;padding-inline:0}.portfolio-page .message{max-width:94%;font-size:13px}.portfolio-page .mobile-nav{background:#faf8f7f5}.portfolio-page .mobile-nav a.is-active{background:#e9dfe5;color:#63354c}}
+
+/* Feature lists stay in one reading column: the entries are long Chinese phrases,
+   so a two-column grid split related points and left ragged, uneven rows.
+   A hairline between rows matches the dividers used by .stats and .explore-grid. */
+.portfolio-page .feature-list {
+  display: block;
+  margin-top: 14px;
+  padding-left: 0;
+}
+.portfolio-page .feature-list li {
+  position: relative;
+  min-width: 0;
+  padding: 9px 0 9px 21px;
+  border-top: 1px solid #eae6e4;
+  font-size: 14px;
+  line-height: 1.85;
+}
+.portfolio-page .feature-list li:first-child {
+  border-top: 0;
+}
+.portfolio-page .feature-list li::before {
+  position: absolute;
+  left: 3px;
+  top: calc(9px + .925em - 2.5px);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #986b7b;
+  content: "";
+}
+
+/* A feature list carries the whole card, so the card keeps a frame on all four
+   sides instead of letting the label, the rows and the chips press against its
+   edges. The 24px inset matches .card.highlight, so every card's copy shares
+   one left edge; only the section title stays flush with the page margin. */
+.portfolio-page .card.no-bg:has(.feature-list) {
+  padding: 28px 24px;
+}
+.portfolio-page .card .tag-list {
+  margin-top: 24px;
+}
+.portfolio-page .card + .action-button {
+  margin-top: 24px;
+}
+
+/* Technology lines: the separator is attached to the item that follows it, so a
+   wrap moves the two together and never strands a "·" at the end of a line. */
+.portfolio-page .meta-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin-top: 8px;
+}
+.portfolio-page .meta-list > * + *::before {
+  content: "·";
+  margin: 0 .3em;
+}
+@media (max-width: 767px) {
+  .portfolio-page .card.no-bg:has(.feature-list) {
+    padding: 22px 20px;
+  }
+  .portfolio-page .feature-list li {
+    padding: 8px 0 8px 19px;
+  }
+  .portfolio-page .feature-list li::before {
+    left: 2px;
+    top: calc(8px + .925em - 2.5px);
+  }
+}

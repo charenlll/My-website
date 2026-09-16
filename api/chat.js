@@ -1,5 +1,5 @@
 export default async function handler(req, res) {
-  const API_KEY = "sk-c171db1cbcb54423ba59abcc7d1973ec";
+  const API_KEY = process.env.DEEPSEEK_API_KEY;
 
   // ✅ 允许跨域（关键！！）
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -15,6 +15,10 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: "Method Not Allowed" });
   }
 
+  if (!API_KEY) {
+    return res.status(503).json({ error: "AI服务暂未配置" });
+  }
+
   try {
     const response = await fetch("https://api.deepseek.com/v1/chat/completions", {
       method: "POST",
@@ -26,7 +30,7 @@ export default async function handler(req, res) {
     });
 
     const data = await response.json();
-    res.status(200).json(data);
+    res.status(response.status).json(data);
 
   } catch (err) {
     console.error(err);

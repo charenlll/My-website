@@ -5,112 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="陈浩文 - 数据分析与人工智能方向研究者，个人主页"
+      content="陈浩文 - 产品实践、数据分析与AI应用开发作品集"
     />
-    <meta name="theme-color" content="#a85a5a" />
-    <title>陈浩文 | 个人主页</title>
-    <link rel="stylesheet" href="./css/style.css?v=20260602-2" />
-  </head>
-
-  <body>
-    <!-- Intro Screen -->
-    <section
-      id="intro"
-      class="intro"
-      role="button"
-      aria-label="进入主页"
-      tabindex="0"
-    >
-      <img
-        src="./images/previews/head_picture1.webp"
-        class="intro-main"
-        alt="头像"
-        width="120"
-        height="120"
-      />
-      <img
-        src="./images/previews/signature.webp"
-        class="intro-bar"
-        alt="签名"
-        width="180"
-        height="84"
-      />
-      <p class="intro-hint">进入主页</p>
-    </section>
-
-    <!-- Background -->
-    <div class="bg" aria-hidden="true"></div>
-
-    <!-- Main Page -->
-    <main class="home-container" aria-label="个人信息">
-      <header class="top-section">
-        <img
-          src="./images/previews/head_picture.webp"
-          class="avatar"
-          alt="陈浩文头像"
-          width="100"
-          height="100"
-          loading="lazy"
-        />
-        <div class="name-group">
-          <h1 class="name">陈浩文</h1>
-          <p class="role">城市数据分析 · AI 应用开发</p>
-        </div>
-      </header>
-
-      <section class="info-section" aria-label="个人简介">
-        <p>
-          以城市规划为背景，关注数据分析、空间研究与人工智能应用，将研究方法转化为可交互的工具与系统。
-        </p>
-      </section>
-
-      <nav class="bottom-section" aria-label="导航">
-        <button class="enter-btn" type="button" onclick="goHome()">
-          进入个人主页
-        </button>
-        <a
-          href="https://charenlll.github.io/mobility-agents/index.html"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="enter-btn ai-btn"
-        >
-          我的AI Agent项目
-        </a>
+    <meta name="theme-color" content="#7f3f46" />
+    <title>陈浩文 | 个人作品集</title>
+    <link rel="canonical" href="https://charenlll.github.io/My-website/" />
+    <link rel="stylesheet" href="./css/home.css?v=20260916-1" />
+  <link rel="stylesheet" href="./css/refined.css?v=20260916-2" />
+  <link rel="stylesheet" href="./css/fluid-home.css?v=20260916-3" />
+</head>
+  <body class="fluid-home"><a class="skip-link" href="#main-content">跳到主要内容</a>
+    <div class="bg2" aria-hidden="true"></div>
+    <header class="top-bar">
+      <a class="brand" href="./home.html"
+        ><span class="brand-mark">CHW</span><span>陈浩文 · Portfolio</span></a
+      >
+      <nav class="nav-group" aria-label="主导航">
+        <a href="./pages/about1.html">个人简介</a
+        ><a href="./pages/about3.html">数据研究</a>
+        <a href="./pages/about4.html">软件开发</a
+        ><a href="./pages/about5.html">艺术表达</a
+        ><a href="./pages/about2.html">AI 问答</a>
       </nav>
-
-      <!-- Footer -->
-      <footer class="site-footer">
-        <div class="footer-contact">
-          <span>手机：13294265626</span>
-          <span>微信：chw1164120252chw</span>
-          <span>邮箱：11641202526@qq.com</span>
+      <a class="top-btn" href="#contact">联系我 ↗</a>
+    </header>
+    <main class="home2-container" id="main-content">
+      <section class="fluid-hero" aria-label="个人介绍">
+        <canvas id="fluid-canvas" aria-hidden="true"></canvas><div class="fluid-shade" aria-hidden="true"></div>
+        <div class="fluid-intro"><p class="fluid-overline">CHEN HAOWEN / PORTFOLIO</p><h1>陈浩文<span>探索问题，也构建答案。</span></h1>
+        <p class="fluid-education">武汉大学硕士在读 <span>·</span> 2027届</p>
+        <p class="fluid-disciplines">产品设计 <span>/</span> 数据分析 <span>/</span> AI应用开发</p>
+        <div class="fluid-actions"><a href="./pages/about1.html">查看经历 <span>↗</span></a><a href="#featured-work">浏览项目 <span>↓</span></a></div></div>
+        <div class="fluid-bottom"><a href="#overview">向下探索 <span>↓</span></a><button type="button" id="motion-toggle" aria-pressed="false">动态效果：开启</button></div>
+      </section>
+      <section class="overview" id="overview"><p class="eyebrow">PROFILE / 个人概览</p><div><h2>连接业务、数据与技术。</h2><p>曾在Construct、华为、美团等公司实习，实践覆盖产品设计、运营与数据分析。通过独立开发AI应用和团队效率工具，将需求转化为可用的产品。</p></div></section>
+      <section class="stats" aria-label="能力概览">
+        <div><strong>千万级</strong><span>交通数据处理规模</span></div>
+        <div><strong>4个市场</strong><span>游戏活动覆盖约1万名参与用户</span></div>
+        <div><strong>2—5倍</strong><span>素材工作台制作效率提升</span></div>
+        <div><strong>独立开发</strong><span>AI桌面助手与团队效率工具</span></div>
+      </section>
+      <section class="section-block" id="featured-work">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Featured Work</p>
+            <h2>代表项目</h2>
+          </div>
+          <a href="./pages/about4.html">查看全部项目 →</a>
         </div>
-        <div class="footer-copy">
-          &copy; <span data-current-year></span> 陈浩文 All Rights Reserved
+        <div class="gallery-grid">
+          <article class="gallery-project"><a class="gallery-image" href="./pages/about4.html"><img src="./images/previews/Wriothesley.webp" alt="Wriothesley桌面助手项目展示" width="1200" height="577" loading="lazy"/></a><p class="gallery-index">01 / AI APPLICATION</p><h3>Wriothesley桌面助手</h3><p>独立完成桌面应用、AI任务指令与云同步，串联对话、任务管理和截图识别。</p><a class="gallery-link" href="./pages/about4.html">了解技术实现 ↗</a></article>
+          <article class="gallery-project"><a class="gallery-image" href="./pages/about4.html#asset-workbench"><img src="./images/asset-workbench.png" alt="素材工作台称号编辑与实时预览界面，原图含红色功能标注" width="2878" height="1616" loading="lazy"/></a><p class="gallery-index">02 / PRODUCT TOOL</p><h3>AI素材工作台</h3><p>面向产品与运营团队独立开发，打通素材编辑与导出流程，制作效率提升<strong>2—5倍</strong>。</p><a class="gallery-link" href="./pages/about4.html#asset-workbench">了解产品实践 ↗</a></article>
+          <article class="gallery-project"><a class="gallery-image" href="./pages/about3.html"><img src="./images/previews/data1.webp" alt="城市交通数据研究可视化作品" loading="lazy"/></a><p class="gallery-index">03 / DATA RESEARCH</p><h3>城市交通数据研究</h3><p>处理<strong>千万级</strong>出行数据，结合用户画像与空间分析，探索不同群体的出行规律。</p><a class="gallery-link" href="./pages/about3.html">了解研究方法 ↗</a></article>
+        </div>
+      </section>
+      <section class="section-block">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Explore</p>
+            <h2>继续了解</h2>
+          </div>
+        </div>
+        <nav class="explore-grid">
+          <a href="./pages/about1.html"
+            ><b>01 · PROFILE</b><strong>个人简介</strong
+            ><span>教育背景、5段实习与能力结构</span></a
+          >
+          <a href="./pages/about2.html"
+            ><b>02 · AI</b><strong>向我提问</strong
+            ><span>通过 AI 快速了解我</span></a
+          >
+          <a href="./pages/about3.html"
+            ><b>03 · RESEARCH</b><strong>数据研究</strong
+            ><span>城市交通与空间分析</span></a
+          >
+          <a href="./pages/about4.html"
+            ><b>04 · SYSTEMS</b><strong>软件开发</strong
+            ><span>系统设计与工具实现</span></a
+          >
+          <a href="./pages/about5.html"
+            ><b>05 · DESIGN</b><strong>艺术表达</strong
+            ><span>可视化、设计与空间表达</span></a
+          >
+        </nav>
+      </section>
+      <footer id="contact" class="site-footer">
+        <div>
+          <strong>陈浩文</strong><span>产品设计、数据分析与 AI 应用开发</span>
+        </div>
+        <div class="footer-contact">
+          <a href="mailto:1164120252@qq.com">1164120252@qq.com</a
+          ><span>微信：chw1164120252chw</span
+          ><span>&copy; <span data-current-year></span></span>
         </div>
       </footer>
     </main>
-
-    <script src="./js/script.js?v=20260602-2"></script>
-    <script>
-      const intro = document.getElementById("intro");
-      const home = document.querySelector(".home-container");
-
-      function dismissIntro() {
-        intro.classList.add("fade-out");
-        setTimeout(() => {
-          intro.style.display = "none";
-          home.style.display = "flex";
-        }, 500);
-      }
-
-      intro.addEventListener("click", dismissIntro);
-      intro.addEventListener("keydown", (e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          dismissIntro();
-        }
-      });
-    </script>
-  </body>
+    <script src="./js/script.js?v=20260916-1"></script>
+  <script src="./js/refined.js?v=20260916-2"></script>
+  <script src="./js/fluid-home.js?v=20260916-3"></script>
+</body>
 </html>

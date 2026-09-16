@@ -9,13 +9,15 @@
     />
     <meta name="theme-color" content="#a85a5a" />
     <title>艺术表达 | 陈浩文</title>
-    <link rel="stylesheet" href="../css/about5.css?v=20260602-2" />
-  </head>
+    <link rel="stylesheet" href="../css/about5.css?v=20260916-4" />
+  <link rel="stylesheet" href="../css/refined.css?v=20260916-4" />
+  <link rel="stylesheet" href="../css/portfolio-pages.css?v=20260916-9" />
+</head>
 
-  <body>
+  <body class="portfolio-page"><a class="skip-link" href="#main-content">跳到主要内容</a>
     <div class="bg" aria-hidden="true"></div>
 
-    <main class="content">
+    <main class="content" id="main-content">
       <header class="page-header">
         <p class="eyebrow">Visual Expression</p>
         <h1>艺术表达</h1>
@@ -25,25 +27,18 @@
       </header>
 
       <div
-        class="carousel-container"
+        class="art-gallery"
         role="region"
-        aria-label="作品轮播"
-        aria-roledescription="carousel"
-      >
-        <button
-          type="button"
-          class="arrow left"
-          aria-label="上一张"
-          onclick="prevCard()"
-        >
-          &#10094;
-        </button>
+        aria-label="视觉作品画廊"
 
-        <div class="carousel-track">
+      >
+
+
+        <div class="art-grid">
           <div
-            class="card-carousel"
+            class="art-item"
             role="group"
-            aria-roledescription="slide"
+
             aria-label="第1张"
           >
             <a class="art-preview" href="../images/space1.png" data-lightbox
@@ -61,9 +56,9 @@
           </div>
 
           <div
-            class="card-carousel"
+            class="art-item"
             role="group"
-            aria-roledescription="slide"
+
             aria-label="第2张"
           >
             <a class="art-preview" href="../images/space2.png" data-lightbox
@@ -81,9 +76,9 @@
           </div>
 
           <div
-            class="card-carousel"
+            class="art-item"
             role="group"
-            aria-roledescription="slide"
+
             aria-label="第3张"
           >
             <a class="art-preview" href="../images/space3.png" data-lightbox
@@ -101,64 +96,14 @@
           </div>
         </div>
 
-        <button
-          type="button"
-          class="arrow right"
-          aria-label="下一张"
-          onclick="nextCard()"
-        >
-          &#10095;
-        </button>
+
       </div>
 
       <p class="swipe-tip" aria-hidden="true">← 左右滑动查看 →</p>
     </main>
 
-    <script src="../js/script.js?v=20260602-2"></script>
-    <script>
-      const track = document.querySelector(".carousel-track");
-      const cards = document.querySelectorAll(".card-carousel");
-      let index = 0;
+    <script src="../js/script.js?v=20260916-4"></script>
 
-      function updateCarousel() {
-        if (!cards.length) return;
-        const cardWidth = cards[0].offsetWidth;
-        track.style.transform = `translateX(${-index * cardWidth}px)`;
-      }
-
-      function prevCard() {
-        index = Math.max(index - 1, 0);
-        updateCarousel();
-      }
-
-      function nextCard() {
-        index = Math.min(index + 1, cards.length - 1);
-        updateCarousel();
-      }
-
-      // Touch swipe
-      let startX = 0;
-      track.addEventListener(
-        "touchstart",
-        (e) => {
-          startX = e.touches[0].clientX;
-        },
-        { passive: true },
-      );
-
-      track.addEventListener(
-        "touchend",
-        (e) => {
-          const diff = startX - e.changedTouches[0].clientX;
-          if (Math.abs(diff) > 50) {
-            diff > 0 ? nextCard() : prevCard();
-          }
-        },
-        { passive: true },
-      );
-
-      window.addEventListener("resize", updateCarousel);
-      window.addEventListener("load", updateCarousel);
-    </script>
+  <script src="../js/refined.js?v=20260916-4"></script>
   </body>
 </html>

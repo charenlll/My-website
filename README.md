@@ -71,3 +71,11 @@ https://charenlll.github.io/My-website/
 ```
 
 版本值只需递增。它会让浏览器重新请求资源，无需访客手动清理缓存。
+
+## AI问答配置
+
+在Vercel部署项目的环境变量中设置 `DEEPSEEK_API_KEY`，然后重新部署。密钥仅由服务端读取，不要写入源码。GitHub Pages本身不执行 `api/chat.js`；前端仍使用 `js/about2.js` 中配置的Vercel接口。
+
+## 2026年9月内容更新
+
+已根据最新简历补充5段实习经历、AI素材工作台与Wriothesley技术实践，并同步首页与AI问答资料。未填写尚未确认的项目日期，也未添加未经确认的营收增长比例。

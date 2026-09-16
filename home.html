@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="陈浩文 - 城市数据分析、人工智能应用与软件开发作品集"
+      content="陈浩文 - 产品实践、数据分析与AI应用开发作品集"
     />
     <meta name="theme-color" content="#7f3f46" />
     <title>陈浩文 | 个人作品集</title>
-    <link rel="stylesheet" href="./css/home.css?v=20260602-2" />
-  </head>
-  <body>
+    <link rel="canonical" href="https://charenlll.github.io/My-website/" />
+    <link rel="stylesheet" href="./css/home.css?v=20260916-1" />
+  <link rel="stylesheet" href="./css/refined.css?v=20260916-2" />
+  <link rel="stylesheet" href="./css/fluid-home.css?v=20260916-3" />
+</head>
+  <body class="fluid-home"><a class="skip-link" href="#main-content">跳到主要内容</a>
     <div class="bg2" aria-hidden="true"></div>
     <header class="top-bar">
       <a class="brand" href="./home.html"
@@ -24,50 +27,25 @@
         ><a href="./pages/about5.html">艺术表达</a
         ><a href="./pages/about2.html">AI 问答</a>
       </nav>
-      <button type="button" class="top-btn" onclick="goIndex()">封面页</button>
+      <a class="top-btn" href="#contact">联系我 ↗</a>
     </header>
-    <main class="home2-container">
-      <section class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow">Urban Data · AI Application · System Design</p>
-          <h1>以数据理解城市，<br />用科学回应问题。</h1>
-          <p class="hero-desc">
-            陈浩文，武汉大学城市规划硕士研究生。关注城市数据分析、空间研究与 AI
-            应用开发，将研究方法转化为可解释、可交互、可落地的工具与系统。
-          </p>
-          <div class="hero-actions">
-            <a class="btn primary" href="./pages/about4.html">查看代表项目</a>
-            <a class="btn secondary" href="./pages/about1.html">了解我的经历</a>
-            <button class="btn secondary" type="button" onclick="scrollToContact()">
-              联系我
-            </button>
-          </div>
-        </div>
-        <div class="hero-profile">
-          <img
-            src="./images/previews/head_picture2.webp"
-            class="hero-avatar"
-            alt="陈浩文头像"
-            width="156"
-            height="156"
-          />
-          <img
-            src="./images/previews/signature.webp"
-            class="hero-signature"
-            alt="陈浩文签名"
-            width="190"
-            height="88"
-          />
-          <p>城市规划 × 数据分析 × AI 应用</p>
-        </div>
+    <main class="home2-container" id="main-content">
+      <section class="fluid-hero" aria-label="个人介绍">
+        <canvas id="fluid-canvas" aria-hidden="true"></canvas><div class="fluid-shade" aria-hidden="true"></div>
+        <div class="fluid-intro"><p class="fluid-overline">CHEN HAOWEN / PORTFOLIO</p><h1>陈浩文<span>探索问题，也构建答案。</span></h1>
+        <p class="fluid-education">武汉大学硕士在读 <span>·</span> 2027届</p>
+        <p class="fluid-disciplines">产品设计 <span>/</span> 数据分析 <span>/</span> AI应用开发</p>
+        <div class="fluid-actions"><a href="./pages/about1.html">查看经历 <span>↗</span></a><a href="#featured-work">浏览项目 <span>↓</span></a></div></div>
+        <div class="fluid-bottom"><a href="#overview">向下探索 <span>↓</span></a><button type="button" id="motion-toggle" aria-pressed="false">动态效果：开启</button></div>
       </section>
+      <section class="overview" id="overview"><p class="eyebrow">PROFILE / 个人概览</p><div><h2>连接业务、数据与技术。</h2><p>曾在Construct、华为、美团等公司实习，实践覆盖产品设计、运营与数据分析。通过独立开发AI应用和团队效率工具，将需求转化为可用的产品。</p></div></section>
       <section class="stats" aria-label="能力概览">
         <div><strong>千万级</strong><span>交通数据处理规模</span></div>
-        <div><strong>AI Agent</strong><span>智能出行与桌面助手</span></div>
-        <div><strong>LLM</strong><span>模型接入与交互开发</span></div>
-        <div><strong>GIS</strong><span>城市空间研究与可视化</span></div>
+        <div><strong>4个市场</strong><span>游戏活动覆盖约1万名参与用户</span></div>
+        <div><strong>2—5倍</strong><span>素材工作台制作效率提升</span></div>
+        <div><strong>独立开发</strong><span>AI桌面助手与团队效率工具</span></div>
       </section>
-      <section class="section-block">
+      <section class="section-block" id="featured-work">
         <div class="section-heading">
           <div>
             <p class="eyebrow">Featured Work</p>
@@ -75,45 +53,10 @@
           </div>
           <a href="./pages/about4.html">查看全部项目 →</a>
         </div>
-        <div class="featured-grid">
-          <article class="featured-card">
-            <p class="card-kicker">AI Agent · Web Application</p>
-            <h3>Mobility Agents</h3>
-            <p>
-              融合公交、地铁与站点周边数据，通过大语言模型生成城市公共交通出行建议。
-            </p>
-            <div class="tag-list">
-              <span>LLM</span><span>Agent</span><span>响应式设计</span>
-            </div>
-            <a
-              href="https://charenlll.github.io/mobility-agents/index.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              >在线体验 ↗</a
-            >
-          </article>
-          <article class="featured-card image-card">
-            <img
-              src="./images/previews/Wriothesley.webp"
-              alt="Wriothesley AI 桌面助手效果展示"
-              loading="lazy"
-              width="1200"
-              height="577"
-            />
-            <div>
-              <p class="card-kicker">Electron · AI Assistant</p>
-              <h3>Wriothesley 桌面助手</h3>
-              <p>
-                聊天、计划、截图 OCR、快速翻译、便签和装扮集中在一个轻量桌面工具里。
-              </p>
-              <a
-                href="https://charenlll.github.io/Wriothesley-Site-Public/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >查看项目 ↗</a
-              >
-            </div>
-          </article>
+        <div class="gallery-grid">
+          <article class="gallery-project"><a class="gallery-image" href="./pages/about4.html"><img src="./images/previews/Wriothesley.webp" alt="Wriothesley桌面助手项目展示" width="1200" height="577" loading="lazy"/></a><p class="gallery-index">01 / AI APPLICATION</p><h3>Wriothesley桌面助手</h3><p>独立完成桌面应用、AI任务指令与云同步，串联对话、任务管理和截图识别。</p><a class="gallery-link" href="./pages/about4.html">了解技术实现 ↗</a></article>
+          <article class="gallery-project"><a class="gallery-image" href="./pages/about4.html#asset-workbench"><img src="./images/asset-workbench.png" alt="素材工作台称号编辑与实时预览界面，原图含红色功能标注" width="2878" height="1616" loading="lazy"/></a><p class="gallery-index">02 / PRODUCT TOOL</p><h3>AI素材工作台</h3><p>面向产品与运营团队独立开发，打通素材编辑与导出流程，制作效率提升<strong>2—5倍</strong>。</p><a class="gallery-link" href="./pages/about4.html#asset-workbench">了解产品实践 ↗</a></article>
+          <article class="gallery-project"><a class="gallery-image" href="./pages/about3.html"><img src="./images/previews/data1.webp" alt="城市交通数据研究可视化作品" loading="lazy"/></a><p class="gallery-index">03 / DATA RESEARCH</p><h3>城市交通数据研究</h3><p>处理<strong>千万级</strong>出行数据，结合用户画像与空间分析，探索不同群体的出行规律。</p><a class="gallery-link" href="./pages/about3.html">了解研究方法 ↗</a></article>
         </div>
       </section>
       <section class="section-block">
@@ -126,7 +69,7 @@
         <nav class="explore-grid">
           <a href="./pages/about1.html"
             ><b>01 · PROFILE</b><strong>个人简介</strong
-            ><span>学习经历与能力结构</span></a
+            ><span>教育背景、5段实习与能力结构</span></a
           >
           <a href="./pages/about2.html"
             ><b>02 · AI</b><strong>向我提问</strong
@@ -148,15 +91,17 @@
       </section>
       <footer id="contact" class="site-footer">
         <div>
-          <strong>陈浩文</strong><span>城市数据分析与 AI 应用开发</span>
+          <strong>陈浩文</strong><span>产品设计、数据分析与 AI 应用开发</span>
         </div>
         <div class="footer-contact">
-          <a href="mailto:11641202526@qq.com">11641202526@qq.com</a
+          <a href="mailto:1164120252@qq.com">1164120252@qq.com</a
           ><span>微信：chw1164120252chw</span
           ><span>&copy; <span data-current-year></span></span>
         </div>
       </footer>
     </main>
-    <script src="./js/script.js?v=20260602-2"></script>
-  </body>
+    <script src="./js/script.js?v=20260916-1"></script>
+  <script src="./js/refined.js?v=20260916-2"></script>
+  <script src="./js/fluid-home.js?v=20260916-3"></script>
+</body>
 </html>

@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="陈浩文软件开发项目 - AI 桌面助手、Mobility Agents 与数据清洗工具"
+      content="陈浩文软件开发项目 - AI素材工作台、AI桌面助手、Mobility Agents与数据清洗工具"
     />
     <title>软件开发 | 陈浩文</title>
-    <link rel="stylesheet" href="../css/about4.css?v=20260602-2" />
-  </head>
-  <body>
+    <link rel="stylesheet" href="../css/about4.css?v=20260916-4" />
+  <link rel="stylesheet" href="../css/refined.css?v=20260916-4" />
+  <link rel="stylesheet" href="../css/portfolio-pages.css?v=20260916-9" />
+</head>
+  <body class="portfolio-page"><a class="skip-link" href="#main-content">跳到主要内容</a>
     <div class="bg" aria-hidden="true"></div>
-    <main class="content">
+    <main class="content" id="main-content">
       <header class="page-header">
         <p class="eyebrow">Systems & Tools</p>
         <h1>软件开发</h1>
@@ -21,14 +23,17 @@
           能力封装为可交互的产品，覆盖在线系统、桌面助手与数据工具。
         </p>
       </header>
-      <section class="project-card">
+<section class="project-card">
         <h2 class="section-title">AI 桌面助手（Wriothesley）</h2>
         <div class="card highlight">
           <p>
-            常驻桌面的 AI 助手。聊天、计划、截图 OCR、快速翻译、便签和装扮集中在一个轻量工具里。
+            独立完成桌面端、AI功能、云同步与展示站开发。将聊天、任务计划、截图OCR、快速翻译与便签整合为常驻桌面的效率工具。
           </p>
-          <p class="text-muted" style="margin-top:8px">
-            Local-first · Electron · DeepSeek API
+          <p class="text-muted meta-list">
+            <span>Electron</span>
+            <span>JavaScript</span>
+            <span>DeepSeek API</span>
+            <strong class="key-point">Supabase</strong>
           </p>
         </div>
         <figure class="project-preview">
@@ -53,7 +58,10 @@
           <p class="text-bold">核心功能：</p>
           <ul class="feature-list">
             <li>桌面角色：透明显示、置顶停靠、可拖拽，并记住上次关闭位置</li>
-            <li>AI 聊天：支持角色设定、历史记忆和上下文对话</li>
+            <li>AI交互：管理历史上下文，解析并校验结构化指令，将自然语言转化为任务操作。</li>
+            <li>系统集成：以IPC实现多窗口通信，适配macOS与Windows原生OCR。</li>
+            <li>云端数据：Supabase账号认证与行级访问控制，同步计划、便签、聊天和配置4类数据。</li>
+            <li>本地可靠性：原子写入、串行写入锁和备份恢复，降低计划数据写入损坏风险。</li>
             <li>计划与周报：聊天可写入计划，任务完成后可整理周报</li>
             <li>截图 OCR：区域截图、保存、复制、文字识别和翻译</li>
             <li>便签与短文本：记录常用信息，快速复制临时内容</li>
@@ -72,6 +80,11 @@
           >查看项目</a
         >
       </section>
+      <section class="project-card" id="asset-workbench">
+<h2 class="section-title">AI素材工作台</h2>
+<div class="card highlight"><p>在Construct实习期间<strong class="key-point">独立设计并开发</strong>，针对产品与运营人员设计门槛高、素材制作依赖专业人员的问题，将AI生成图片和视频接入统一的编辑、预览与导出流程。</p></div>
+<figure class="project-preview"><a href="../images/asset-workbench.png" data-lightbox aria-label="查看素材工作台原图"><img src="../images/asset-workbench.png" alt="素材工作台称号编辑界面及实时预览，红框为原图功能标注" width="2878" height="1616" loading="lazy" /></a><figcaption>称号素材编辑与实时预览 · 点击查看原图</figcaption></figure><div class="card no-bg"><ul class="feature-list"><li>个人职责：需求梳理、交互设计、独立开发、使用说明与团队交接。</li><li>功能覆盖：头像框、卡片、气泡、称号和背景等素材，支持位置、大小及部分动态效果调整。</li><li>实际使用：已在部门产品与运营团队落地，按素材类型制作效率提升2—5倍。</li></ul><div class="tag-list"><span>独立设计开发</span><span>AI素材工作流</span><span>团队效率工具</span></div></div>
+</section>
       <section class="project-card">
         <h2 class="section-title">
           城市公共交通智能出行系统（Mobility Agents）
@@ -115,6 +128,7 @@
         <button class="action-button" onclick="downloadFile()">下载软件</button>
       </section>
     </main>
-    <script src="../js/script.js?v=20260602-2"></script>
+    <script src="../js/script.js?v=20260916-4"></script>
+  <script src="../js/refined.js?v=20260916-4"></script>
   </body>
 </html>

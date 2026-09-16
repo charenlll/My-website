@@ -56,7 +56,7 @@ function renderSharedPageShell() {
 
   document.body.insertAdjacentHTML(
     "afterbegin",
-    `<nav class="top-bar" aria-label="主导航">
+    `<nav class="top-bar" aria-label="主导航"><a class="page-brand" href="../index.html" aria-label="陈浩文首页">CHW<span>陈浩文</span></a>
       <div class="nav-group">${desktopLinks}</div>
       <a class="top-btn" href="../home.html">主页</a>
     </nav>`,
@@ -64,8 +64,8 @@ function renderSharedPageShell() {
   content.insertAdjacentHTML(
     "beforeend",
     `<footer class="site-footer">
-      <span>陈浩文 · 城市数据分析与 AI 应用开发</span>
-      <a href="mailto:11641202526@qq.com">11641202526@qq.com</a>
+      <span>陈浩文 · 产品设计、数据分析与 AI 应用开发</span>
+      <a href="mailto:1164120252@qq.com">1164120252@qq.com</a>
       <span>&copy; <span data-current-year></span> All Rights Reserved</span>
     </footer>`,
   );
