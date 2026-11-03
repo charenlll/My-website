@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="陈浩文的作品集，包含独立游戏渡魂、弹珠活动与 AI 桌面助手。">
+  <title>陈浩文｜作品集</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell nav-row">
+      <a class="identity" href="#top">陈浩文<span> / 作品集</span></a>
+      <nav aria-label="页面导航"><a href="#works">项目</a><a href="#duhun">渡魂</a><a href="#marble">弹珠活动</a><a href="#assistant">AI 助手</a></nav>
+      <a class="nav-mail" href="../index.html#contact">联系我 ↗</a>
+    </div>
+  </header>
+  <main id="top">
+    <section class="hero shell">
+      <p class="kicker">GAME DESIGN PORTFOLIO · 2026</p>
+      <h1>设计有趣的规则，<br><em>做出值得继续玩的体验。</em></h1>
+      <p class="hero-lead">我是陈浩文，武汉大学硕士。做过面向四个市场的游戏化活动，也独立开发了卡牌 Roguelite Demo。这里用三个项目展示我的设计、落地与技术能力。</p>
+      <div class="hero-actions"><a class="button button-main" href="#works">浏览项目 ↓</a><a class="button" href="../index.html#contact">联系我</a></div>
+      <div class="hero-facts"><span>玩法与系统设计</span><span>原型与开发验证</span><span>AI 工具实践</span></div>
+    </section>
+
+    <section class="overview section" id="works"><div class="shell">
+      <div class="section-heading"><p class="kicker">01 / SELECTED WORKS</p><h2>项目作品</h2><p>独立游戏、上线活动与个人产品。点击项目，查看具体的设计与实现。</p></div>
+      <div class="work-list">
+        <a class="work-row" href="#duhun"><span class="work-no">01</span><span><strong>渡魂</strong><small>独立游戏 · 卡牌 Roguelite Demo</small></span><span class="work-desc">从规则设计到可运行版本</span><span class="work-arrow">↗</span></a>
+        <a class="work-row" href="#marble"><span class="work-no">02</span><span><strong>弹珠活动</strong><small>实习项目 · 游戏化活动</small></span><span class="work-desc">PRD、数值、开发对接与验收</span><span class="work-arrow">↗</span></a>
+        <a class="work-row" href="#assistant"><span class="work-no">03</span><span><strong>AI 桌面助手</strong><small>个人项目 · 产品与技术</small></span><span class="work-desc">独立完成产品设计与开发</span><span class="work-arrow">↗</span></a>
+      </div>
+    </div></section>
+
+    <section class="case section" id="duhun"><div class="shell">
+      <div class="case-intro"><div><p class="kicker">02 / INDEPENDENT GAME</p><h2>渡魂</h2><p class="case-type">独立开发中的浏览器卡牌 Roguelite Demo</p></div><p class="case-lead">把每一场战斗的出牌决定，延伸成下一场战斗的牌组与资源取舍。</p></div>
+      <div class="case-grid"><article><span class="label">项目目标</span><p>设计一个能反复尝试的短流程：玩家在连续战斗中学习规则，通过战后选牌调整策略，而不是只依靠单场输出。</p></article><article><span class="label">我的职责</span><p>独立完成玩法规则、卡牌与敌方意图配置、界面实现、存档和测试。使用 TypeScript 开发浏览器版本。</p></article><article><span class="label">关键设计</span><p>每轮包含三场战斗；胜利后从三张牌中选一张。灯火限制出牌，浊念牌占据手牌或消耗资源，让选择产生后续影响。</p></article><article><span class="label">当前成果</span><p>已完成可运行的序章与普通对局 Demo。固定种子可复现牌序、敌方意图和奖励，便于定位并验证问题。</p></article></div>
+      <figure class="wide-figure"><button class="image-button" data-image="assets/渡魂战斗页.png"><img src="assets/渡魂战斗页.png" alt="渡魂战斗界面" loading="lazy"></button><figcaption><b>战斗界面</b><span>手牌、灯火、敌方意图与回合操作集中呈现，截图保持原始比例。</span></figcaption></figure>
+      <div class="image-pair"><figure><button class="image-button" data-image="assets/渡魂主页.png"><img src="assets/渡魂主页.png" alt="渡魂驿站主页" loading="lazy"></button><figcaption>驿站主页 · 对局与内容入口</figcaption></figure><figure><button class="image-button" data-image="assets/渡魂人物主页面.png"><img src="assets/渡魂人物主页面.png" alt="渡魂人物页面" loading="lazy"></button><figcaption>人物页面 · 特性与专属卡牌</figcaption></figure><figure><button class="image-button" data-image="assets/渡魂牌组.png"><img src="assets/渡魂牌组.png" alt="渡魂牌组界面" loading="lazy"></button><figcaption>牌组界面 · 查看构筑结果</figcaption></figure><figure><button class="image-button" data-image="assets/渡魂对话页.png"><img src="assets/渡魂对话页.png" alt="渡魂剧情对话" loading="lazy"></button><figcaption>剧情对话 · 序章叙事</figcaption></figure><figure><button class="image-button" data-image="assets/渡魂信物录.png"><img src="assets/渡魂信物录.png" alt="渡魂信物录" loading="lazy"></button><figcaption>信物录 · 驿站内容页面</figcaption></figure></div>
+      <p class="case-note">项目仍在开发；页面展示当前已完成的 Demo 内容。</p>
+    </div></section>
+
+    <section class="case section" id="marble"><div class="shell">
+      <div class="case-intro"><div><p class="kicker">03 / INTERNSHIP PROJECT</p><h2>弹珠活动</h2><p class="case-type">Construct · 产品与运营实习</p></div><p class="case-lead">把活动目标拆成玩家可理解的参与流程、奖励规则和可执行的配置方案。</p></div>
+      <div class="case-grid"><article><span class="label">项目目标</span><p>为海外社交产品设计游戏化活动，吸引用户参与，并结合奖励、兑换等节点推动充值与金币消耗。</p></article><article><span class="label">我的职责</span><p>负责 PRD、玩法原型、数值设计、开发对接、验收和资源配置，跟进活动从方案到上线。</p></article><article><span class="label">关键设计</span><p>梳理弹珠参与、奖励与规则说明；将视觉稿和交互原型对应，统一开发、设计和运营对玩法的理解。</p></article><article><span class="label">实际结果</span><p>活动覆盖菲律宾、缅甸、印尼和华语市场，约一万人参与，带动充值与金币消耗增长。无可靠增长比例，不作百分比表述。</p></article></div>
+      <div class="comparison-heading"><h3>设计稿与原型对照</h3><p>原始文件分辨率较低，因此保持接近原尺寸展示；点击可查看原图。</p></div>
+      <div class="prototype-grid"><figure><div class="prototype-frame"><button class="image-button" data-image="assets/弹珠设计稿.png"><img src="assets/弹珠设计稿.png" alt="弹珠活动设计稿" loading="lazy"></button></div><figcaption>活动视觉设计稿</figcaption></figure><figure><div class="prototype-frame"><button class="image-button" data-image="assets/弹珠原型.png"><img src="assets/弹珠原型.png" alt="弹珠活动原型" loading="lazy"></button></div><figcaption>活动交互原型</figcaption></figure><figure><div class="prototype-frame"><button class="image-button" data-image="assets/弹珠规则设计稿.png"><img src="assets/弹珠规则设计稿.png" alt="弹珠规则设计稿" loading="lazy"></button></div><figcaption>规则视觉设计稿</figcaption></figure><figure><div class="prototype-frame"><button class="image-button" data-image="assets/弹珠规则原型.png"><img src="assets/弹珠规则原型.png" alt="弹珠规则原型" loading="lazy"></button></div><figcaption>规则交互原型</figcaption></figure></div>
+      <p class="case-note">公开发布前，需确认实习项目图片中的内部信息与素材使用授权。</p>
+    </div></section>
+
+    <section class="case section" id="assistant"><div class="shell">
+      <div class="case-intro"><div><p class="kicker">04 / AI PRODUCT</p><h2>AI 桌面助手</h2><p class="case-type">独立产品设计与开发</p></div><p class="case-lead">将自然语言能力接入日常任务，也展示我独立制作工具和验证产品交互的能力。</p></div>
+      <div class="case-grid"><article><span class="label">项目目标</span><p>让计划、便签与聊天在一个桌面工具中协同，通过自然语言减少重复操作。</p></article><article><span class="label">我的职责</span><p>独立完成桌面应用、云同步与产品展示站的设计和开发。</p></article><article><span class="label">关键设计</span><p>接入 DeepSeek，处理上下文并解析、校验结构化指令，实现自然语言操作任务与周报生成。</p></article><article><span class="label">当前成果</span><p>完成账号认证及计划、便签、聊天、配置四类数据云同步；本地计划支持原子写入、串行写入锁与备份恢复。</p></article></div>
+      <h3 class="gallery-title">产品界面</h3><p class="gallery-intro">从计划、便签到对话与配置，展示桌面助手的主要使用场景。</p>
+      <div class="assistant-images"><figure><button class="image-button" data-image="assets/wriothesley-main.webp"><img src="assets/wriothesley-main.webp" alt="AI 桌面助手展示图" loading="lazy"></button><figcaption>产品形象与桌面呈现</figcaption></figure><figure><button class="image-button" data-image="assets/panel-plan.webp"><img src="assets/panel-plan.webp" alt="计划面板" loading="lazy"></button><figcaption>计划 · 管理日常任务</figcaption></figure><figure><button class="image-button" data-image="assets/panel-notes.webp"><img src="assets/panel-notes.webp" alt="便签面板" loading="lazy"></button><figcaption>便签 · 快速记录信息</figcaption></figure><figure><button class="image-button" data-image="assets/panel-chat.webp"><img src="assets/panel-chat.webp" alt="聊天面板" loading="lazy"></button><figcaption>聊天 · 自然语言入口</figcaption></figure><figure><button class="image-button" data-image="assets/panel-settings.webp"><img src="assets/panel-settings.webp" alt="设置面板" loading="lazy"></button><figcaption>设置 · 模型与功能配置</figcaption></figure><figure><button class="image-button" data-image="assets/panel-wardrobe.webp"><img src="assets/panel-wardrobe.webp" alt="装扮面板" loading="lazy"></button><figcaption>装扮 · 个性化设置</figcaption></figure></div>
+    </div></section>
+
+    <section class="contact-section section"><div class="shell"><p class="kicker">05 / CONTACT</p><h2>进一步交流项目细节</h2><p>欢迎联系我讨论玩法规则、原型制作与实际项目经历。</p><a class="button button-main" href="../index.html#contact">返回个人主页 · 联系方式 ↗</a></div></section>
+  </main>
+  <footer><div class="shell">© 2026 陈浩文 · 作品集</div></footer>
+  <dialog id="viewer" aria-label="查看完整图片"><button id="viewer-close" aria-label="关闭">×</button><img id="viewer-image" alt="项目图片原图"></dialog>
+</body>
+</html>
+
+\n
