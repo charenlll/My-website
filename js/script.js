@@ -35,7 +35,7 @@ const SUB_PAGES = [
   ["about1.html", "个人简介", "简介"],
   ["about2.html", "向我提问", "问答"],
   ["about3.html", "数据研究", "研究"],
-  ["about4.html", "软件开发", "开发"],
+  ["about4.html", "项目开发", "开发"],
   ["about5.html", "艺术表达", "设计"],
 ];
 
@@ -56,7 +56,7 @@ function renderSharedPageShell() {
 
   document.body.insertAdjacentHTML(
     "afterbegin",
-    `<nav class="top-bar" aria-label="主导航"><a class="page-brand" href="../index.html" aria-label="陈浩文首页">CHW<span>陈浩文</span></a>
+    `<nav class="top-bar" aria-label="主导航"><a class="brand" href="../home.html"><span class="brand-mark">CHW</span><span>陈浩文 · Portfolio</span></a>
       <div class="nav-group">${desktopLinks}</div>
       <a class="top-btn" href="../home.html">主页</a>
     </nav>`,
