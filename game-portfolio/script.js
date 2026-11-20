@@ -1,15 +1,1 @@
-const viewer = document.getElementById('viewer');
-const viewerImage = document.getElementById('viewer-image');
-
-document.querySelectorAll('[data-image]').forEach(button => {
-  button.addEventListener('click', () => {
-    viewerImage.src = button.dataset.image;
-    viewerImage.alt = button.querySelector('img').alt;
-    viewer.showModal();
-  });
-});
-
-document.getElementById('viewer-close').addEventListener('click', () => viewer.close());
-viewer.addEventListener('click', event => {
-  if (event.target === viewer) viewer.close();
-});
+document.addEventListener('click',e=>{const i=e.target.closest('[data-zoom]');const l=document.querySelector('.lightbox');if(i){l.querySelector('img').src=i.src;l.classList.add('open');document.body.style.overflow='hidden'}if(e.target===l||e.target.closest('.lightbox button')){l.classList.remove('open');document.body.style.overflow=''}});document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.querySelector('.lightbox').classList.remove('open');document.body.style.overflow=''}});
