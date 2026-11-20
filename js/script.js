@@ -45,9 +45,10 @@ function renderSharedPageShell() {
 
   const desktopLinks = SUB_PAGES.map(
     ([path, label]) => `<a href="./${path}" data-page="${path}">${label}</a>`,
-  ).join("");
+  ).join("") + `<a class="nav-portfolio" href="../game-portfolio/index.html">作品集 ↗</a>`;
   const mobileLinks = [
     `<a href="../home.html" data-page="home.html">首页</a>`,
+    `<a href="../game-portfolio/index.html" data-page="game-portfolio">作品集</a>`,
     ...SUB_PAGES.map(
       ([path, , shortLabel]) =>
         `<a href="./${path}" data-page="${path}">${shortLabel}</a>`,

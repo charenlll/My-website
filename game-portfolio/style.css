@@ -58,3 +58,5 @@ main:has(.process-grid) .section>.flow,main:has(.metric-grid) .section>.flow,mai
 .boundary-evidence{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:900px;margin:34px auto 0}
 .boundary-evidence img{display:block;max-width:100%;width:auto;height:490px;object-fit:contain;margin:auto;cursor:zoom-in}
 @media(max-width:760px){.prototype-live,.boundary-evidence{grid-template-columns:1fr}.prototype-live img,.boundary-evidence img{height:auto;max-height:560px}.project .visual-marble-four{gap:2px}}
+
+.top nav .back-home{display:inline-flex;align-items:center;padding:7px 12px;border:1px solid var(--gold);border-radius:3px;color:var(--gold);font-weight:700;white-space:nowrap}.top nav .back-home:hover{background:var(--gold);color:var(--bg)}@media(max-width:760px){.top nav{display:flex;gap:0}.top nav a:not(.back-home){display:none}.top nav .back-home{font-size:12px;padding:6px 9px}}
